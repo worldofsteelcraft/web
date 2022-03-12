@@ -1,0 +1,9 @@
+html{
+    background-color:#32e532;
+}
+@media (prefers-color-scheme: dark) {
+	/*page-dark-html*/
+	html{
+		background:#159d15;
+	}
+}

@@ -1,11 +1,20 @@
 baseURL: 'https://worldofsteelcraft.tk/'
 languageCode: en-us
 title: World of SteelCraft
-theme: WoSCWebCore
+theme: codenamecore
 params:
   description: World of SteelCraft is a server owned by Scary Master Playz which is currently managed by himself and other admins. We're welcoming Filipino Minecraft Players to join
   pagePreviewImage: /images/preview.png
   author: World of SteelCraft
+
+  fbSDKID: 583745462831772
+  onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
+
+  copyrightyearStarted: 2021 
+  copyrightyearToday: 2022
+  copyrightHolder: World of SteelCraft/Scary Master Playz
+  copyrightNotes: Elements of this website are owned by World of SteelCraft. Other third party copyrighted content are owned by their respective owners.
+  managedByWhom: Currently managed by [dpG06](https://dplayzgames06.tk)
 enableGitInfo: true
 enableRobotsTXT: false
 buildDrafts: false

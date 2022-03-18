@@ -40,5 +40,6 @@ draft: false
             </div>
             </div>
                 <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save">Join server(Members Only)</a>
+		<div class="padding"></div>
     </div>
 </div>

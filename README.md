@@ -19,6 +19,7 @@ These are the dependencies of this website.
 - [Hugo](https://gohugo.io)
 - [Netlify CMS](https://netlifycms.org)
 - [Disqus](https://disqus.com)
+- [codenamecore Theme](https://github.com/dplayz/codenamecore)
 
 ## Contributing
 If you want to contribute to the project, please consider the following:
@@ -26,6 +27,7 @@ If you want to contribute to the project, please consider the following:
 2. You have knowledge what the community is experiencing.  
 Your contribution still matters, but it might be only appreciated by the members of the community.
 3. You must have knowledge on how the project dependencies work (Hugo Templating, Markdown Writing, HTML and CSS coding). If not, you can check the documentation of the dependencies.
+4. All theme design related concerns should be directed from [codenamecore](https://github.com/dplayz/codenamecore).
 
 Here is what to follow:
 - If you do not want to ruin your workflow, and our workflow, please create another branch other than **main**.

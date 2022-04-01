@@ -1,4 +1,4 @@
-baseURL: 'https://worldofsteelcraft.tk/'
+baseURL: 'https://worldofsteelcraft.gq/'
 languageCode: en-us
 title: World of SteelCraft
 theme: codenamecore
@@ -6,9 +6,6 @@ params:
   description: World of SteelCraft is a server owned by Scary Master Playz which is currently managed by himself and other admins. We're welcoming Filipino Minecraft Players to join
   pagePreviewImage: /images/preview.png
   author: World of SteelCraft
-
-  fbSDKID: 583745462831772
-  onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
 
   copyrightyearStarted: 2021 
   copyrightyearToday: 2022

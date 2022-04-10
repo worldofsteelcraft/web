@@ -26,9 +26,9 @@ Default badges that you can get easily
 
 The badge of the WoSC Server Administrators
 
-##### Member Badge
+##### Veteran Badge
 
-The badge of WoSC Members, normally being awarded every Saturday
+The badge of veteran members
 
 ##### Invite More Badge
 

@@ -1,4 +1,9 @@
 [build.environment]
   TZ='Asia/Manila'
   HUGO_VERSION = "0.87.0"
+  HUGO_ENV= "production"
+[context.dev]
+ HUGO_ENV="development"
 
+[context.deploy-preview.environment]
+ HUGO_ENV="staging"

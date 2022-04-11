@@ -2,7 +2,8 @@
   TZ='Asia/Manila'
   HUGO_VERSION = "0.87.0"
   HUGO_ENV= "production"
-[context.dev]
+  
+[context.branch-deploy]
  HUGO_ENV="development"
 
 [context.deploy-preview.environment]

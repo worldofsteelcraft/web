@@ -9,7 +9,7 @@ params:
 
   fbSDKID: 583745462831772
   onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
-
+  devBranchNotice: true
   copyrightyearStarted: 2021 
   copyrightyearToday: 2022
   copyrightHolder: World of SteelCraft/Scary Master Playz

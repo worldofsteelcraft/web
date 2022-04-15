@@ -22,17 +22,19 @@ draft: false
     <img src="/images/logo.png" class="style-exclude" width="150px">
         <div class="row">
             <div class="column">
-                <div class="mypanel">
+                <div class="serverstatuspanel">
                     <table>
-                        <tbody><tr><th>Server IP Address</th><td><span id="hostname"></span></td></tr>
-                        <tr><th>Server Port</th><td><span id="port"></span></td></tr>
-                        <tr><th>Online</th><td><span id="isonline"></span></td></tr>
-                         <tr><th>MOTD</th><td><span id="motd"></span></td></tr>
-                        <tr><th>Version Running</th><td><span id="version"></span></td></tr>
-                        <tr><th>Players</th><td><span id="playeronline"></span>/<span id="playermax"></span></td></tr>
-                        <tr><th>Map Name</th><td><span id="mapname"></span></td></tr>
+                        <tbody><tr><th>Server IP Address</th><td><span id="hostname">Loading... </span></td></tr>
+                        <tr><th>Server Port</th><td><span id="port">Loading...</span></td></tr>
+                        <tr><th>Status</th><td><div id="isonline"></div></td></tr>
+                         <tr class="ping-disable-when-offline"><th>MOTD</th><td><span id="motd">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th>Version Running</th><td><span id="version">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th>Players</th><td><span id="playercount">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th>Map Name</th><td><span id="mapname">Loading...</span></td></tr>
                         </tbody>
                     </table>
+                    <div id="isofflinecss"></div>
+                    <style>div.serverstatuspanel{min-width:100%;max-width:100%;}</style>
                 </div>
             </div>
             <div class="column">

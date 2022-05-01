@@ -120,3 +120,38 @@ Using these apps will make you banned!(Read [Section 3C](#section-3))
 
 **G**. Community guidelines of every messaging platform([Facebook Messenger](https://www.facebook.com/communitystandards/introduction)/[Discord](https://discord.com/guidelines)) must be followed.
 </div>
+<div class="padding border" id="section-10">
+
+### Section 10 | Clan Guidelines
+This is a special rule for clan/nation/faction members and leaders.
+
+**A**. Clan must have 2-3 members in order to be considered a clan
+
+**B**. Clan must have certain goal in order to be considered clan
+
+**C**. During the war, clan is allowed to attack other clans anything what is the reason of it
+
+**D**. There will be exception to Section 1B when there's war.
+
+**E**. War should be Clan-to-Clan in order to be considered war
+
+**F**. It will not be considered war when the involved parties are Player-To-Clan attack or Clan-to-Player attack.
+
+**G**. Leader should be responsible with their members. Leaders have the authority to punish, or kick them from their clan
+
+**H**. The loosing side of the war should give winning side a reparation.
+
+**I**. Admin will regulate the reparation
+
+**J**. Clan member should follow the nickname pattern: ``<username> | <clan name>``
+</div>
+<div class="padding border" id="section-11">
+
+### Section 11 | Moderator Role
+
+**A**. Enforce members to obey the rules/law that exists
+
+**B**. Follow rules/law that exist
+
+**C**. Report rule-breaking activities that member committed to admins.
+</div>

@@ -94,3 +94,17 @@ collections:
       - {label: "Comments", name: "enableComments", widget: "boolean", default: false }
       - {label: "Exclude from Sitemap", name: "sitemapExclude", widget: "boolean", required: false}
       - {label: "Blog Author", name: "author", widget: "string", required: true}
+  - name: "announcements" # Used in routes, e.g., /admin/collections/blog
+    label: "Announcement" # Used in the UI
+    folder: "content/announcements" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", picker_utc: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Custom Preview Image", name: "customPagePreviewImageURL", widget: "image", required: false, default: "/images/preview.png"}
+      - {label: "Comments", name: "enableComments", widget: "boolean", default: false }
+      - {label: "Exclude from Sitemap", name: "sitemapExclude", widget: "boolean", required: false, default: true}
+      - {label: "Blog Author", name: "author", widget: "string", required: true}
+      - {label: "Hide from Public(TEMPORARY WORKAROUND)", name: "draft", widget: "boolean", default: false } # Replace this shit after some time

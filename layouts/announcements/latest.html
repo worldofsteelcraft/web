@@ -1,0 +1,5 @@
+{{ define "main" }}
+{{ range ( first 3 ( where .Site.Pages "Type" "announcements" ).ByDate ) }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+{{ end }}

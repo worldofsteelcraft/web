@@ -1,5 +1,5 @@
 {{ define "main" }}
-            <div class="pagetitle"><h1>{{ .Title }}</h1>
-            </div>
-            <div id="pagecontent">{{ .Content }}</div>
-{{ end }}
+{{ partial "page/pagetitle.html" .}}
+{{ partial "page/pagecontent.html" .}}
+{{ partial "page/pagecomments.html" .}}
+{{end}}

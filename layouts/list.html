@@ -1,0 +1,31 @@
+{{ define "head" }}
+<head>
+  {{ partial "head-basic-info.html" . }}
+  {{ partial "head-scripts.html" . }}
+  <title>Ban Information | World of SteelCraft</title>
+
+  <meta name="title" content="Ban Information | World of SteelCraft">
+  <meta name="description" content="This is the list of banned members with reasons and proof. You will not get banned for unreasonable reason.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="Ban Information | World of SteelCraft">
+  <meta property="og:description" content="This is the list of banned members with reasons and proof. You will not get banned for unreasonable reason.">
+  <meta property="og:image" content="https://worldofsteelcraft.tk/images/preview.png">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ .Permalink }}">
+  <meta property="twitter:title" content="Ban Information | World of SteelCraft">
+  <meta property="twitter:description" content="This is the list of banned members with reasons and proof. You will not get banned for unreasonable reason.">
+  <meta property="twitter:image" content="https://worldofsteelcraft.tk/images/preview.png">
+</head>
+{{end}}
+{{ define "main" }}
+<div class="pagetitle border">
+  <h1>Ban Information</h1>
+  <p>This is the list of banned members with reasons and proof. You will not get banned for unreasonable reason.</p>
+  <p>Punishments subjects to the <b><a href="/rules">rules</a></b></p>
+  <p>If you think that you got wrongfully banned or want to get context or non-personal information, message us on our personal accounts or email <b><a href="mailto:admins@worldofsteelcraft.tk">admins@worldofsteelcraft.tk</a></b></p>
+</div>
+{{ partial "list/pagetitle-design.html" .}}
+{{end}}

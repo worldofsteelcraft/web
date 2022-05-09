@@ -107,4 +107,4 @@ collections:
       - {label: "Comments", name: "enableComments", widget: "boolean", default: false }
       - {label: "Exclude from Sitemap", name: "sitemapExclude", widget: "boolean", required: false, default: true}
       - {label: "Blog Author", name: "author", widget: "string", required: true}
-      - {label: "Hide from Public(TEMPORARY WORKAROUND)", name: "draft", widget: "boolean", default: false } # Replace this shit after some time
+      - {label: "Hide from Public", name: "featured", widget: "boolean", default: true }

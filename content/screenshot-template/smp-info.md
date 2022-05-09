@@ -7,9 +7,8 @@ hideHeader: true
 hideFooter: true
 hideSidebar: true
 ---
-<style>.serverstatus-sstemplate{border:5px black solid; border-radius:10px;margin:10%;padding:10px; padding-top:-10px;}</style>
 <script src="/scripts/smp-query.js"></script>
-<div class="serverstatus-sstemplate">
+<div class="ss-template-container smp-status">
     <img src="/images/logo.png" class="style-exclude" width="150px">
                    <noscript>This service won't work until you enable Javascript, Please Enable it
                    <style>.serverstatus-sstemplate-content{display:none;}</style></noscript>

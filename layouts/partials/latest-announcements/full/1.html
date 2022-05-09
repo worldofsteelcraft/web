@@ -1,0 +1,7 @@
+{{ range ( last 1 ( where .Site.Pages "Type" "announcements" ).ByDate ) }}
+{{if eq .Params.featured true}}
+<h2>{{.Title}}</h2>
+<sub>Published {{ dateFormat "02 Jan 06 15:04 MST" .Date.Local }}</sub>
+<p>{{.Content}}</p>
+{{else}}<h2>No Featured Announcements yet</h2>{{end}}
+{{end}}

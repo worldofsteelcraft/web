@@ -1,4 +1,0 @@
-{{ range ( last 1 ( where .Site.Pages "Type" "announcements" ).ByDate ) }}
-<h1>{{.Title}}</h1>
-{{.Content}}
-{{end}}

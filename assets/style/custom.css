@@ -7,7 +7,7 @@ html{
 		background:#159d15;
 	}
 }
-div.smp-status{
+.smp-status{
 background: rgb(52,153,69);
 	background: -moz-linear-gradient(131deg, rgba(52,153,69,1) 45%, rgba(85,85,255,1) 100%);
 	background: -webkit-linear-gradient(131deg, rgba(52,153,69,1) 45%, rgba(85,85,255,1) 100%);

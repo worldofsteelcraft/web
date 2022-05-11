@@ -1,5 +1,6 @@
+/* Attention to admins/server management: Change the lines with "Here" comments with their corresponding port or IP when migration between hosts take place*/
 jQuery(document).ready(function( $ ){
-	$.getJSON('https://api.bedrockinfo.com/v2/status?server=smp.worldofsteelcraft.tk&port=25576', function(data) {      
+	$.getJSON('https://api.bedrockinfo.com/v2/status?server=smp.worldofsteelcraft.tk&port=25576', function(data) {  /* Here */  
 		$('#hostname').text(data.HostName);
 		$('#port').text(data.IPv4Port);
 		$('#version').text(data.Version);
@@ -16,5 +17,5 @@ jQuery(document).ready(function( $ ){
 		$('#playercount').text(data.Players +'/'+ data.MaxPlayers );
 		$('#motd').text(data.ServerName);
 	});
-	$('#playergraph').attr('src','https://bedrockinfo.com/data/smp.worldofsteelcraft.tk:25576');
+	$('#playergraph').attr('src','https://bedrockinfo.com/data/smp.worldofsteelcraft.tk:25576');  /* Here */
 });

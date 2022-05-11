@@ -20,9 +20,9 @@ body_class: smp-status
                         <tr class="ping-disable-when-offline"><th>Map Name</th><td><span id="mapname">Loading...</span></td></tr>
                         </tbody>
                     </table>
-                    <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph (Not Available)</button>
-                    <div class="content" style="display: none;">
-                        <p>See?</p>
+                    <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph</button>
+                    <div class="content" style="display:none;">
+                        <iframe id="playergraph" style="height:1110px; margin-top:-750px; border:10px #666 solid; border-radius:5px;" scrolling="no"  width="370px" loading="lazy"></iframe>
 			        </div>
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>

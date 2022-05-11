@@ -16,4 +16,5 @@ jQuery(document).ready(function( $ ){
 		$('#playercount').text(data.Players +'/'+ data.MaxPlayers );
 		$('#motd').text(data.ServerName);
 	});
+	$('#playergraph').attr('src','https://bedrockinfo.com/data/smp.worldofsteelcraft.tk:25576');
 });

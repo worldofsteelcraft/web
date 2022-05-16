@@ -17,7 +17,7 @@ hideSidebar: true
                     <table>
                         <tbody><tr><th>Server IP Address</th><td><span id="hostname">Loading... </span></td></tr>
                         <tr><th>Server Port</th><td><span id="port">Loading...</span></td></tr>
-                        <tr><th>Status</th><td><div id="isonline"></div></td></tr>
+                        <tr><th>Status</th><td><div id="isonline">Loading...</div></td></tr>
                          <tr class="ping-disable-when-offline"><th>MOTD</th><td><span id="motd">Loading...</span></td></tr>
                         <tr class="ping-disable-when-offline"><th>Version Running</th><td><span id="version">Loading...</span></td></tr>
                         <tr class="ping-disable-when-offline"><th>Players</th><td><span id="playercount">Loading...</span></td></tr>

@@ -21,9 +21,17 @@ jQuery(document).ready(function ( $ ){
 				$('#isoffline-sstemplate-css').append('<style>.serverstatus-sstemplate-content{display:none;}</style>');
 				$('#isoffline-sstemplate-text').append('<p><b>Server is offline, please check for maintenance notice.</b></p>');
 			 };
+			var unixTime= data.CheckTimeStamp;
+			var checkTimeStampProcessed = new Date();
+			checkTimeStampProcessed.setTime(unixTime * 1000);
 			$('#playercount').text(data.Players +'/'+ data.MaxPlayers );
 			$('#motd').text(data.ServerName);
-			console.log("Data Fetched from API Successfully");
+			$('#timefetched').text(checkTimeStampProcessed);
+			if (data.Online == true) {
+				console.log("Data Fetched from API Successfully" + "\n" + "\n" + "Data Processed:" + "\n" + "IP: "+ data.HostName + "\n" + "Port: "+ data.IPv4Port + "\n" + "Online: "+ data.Online + "\n" + "Players: "+ data.Players +'/'+ data.MaxPlayers + "\n" + "Server Version: "+ data.Version + "\n" + "MOTD: "+ data.ServerName + "\n" + "Map Name: "+ data.LevelName + "\n" +"Time Processed: " + checkTimeStampProcessed );}
+			else{
+				console.log("Data Fetched from API Successfully" + "\n" + "\n" + "Data Processed:" + "\n" +"IP: "+ data.HostName + "\n" + "Port: "+ data.IPv4Port + "\n" + "Online: "+ data.Online + "\n" + "Time Processed: " + checkTimeStampProcessed );
+			}
 			clearTimeout(myTimer);
 		});
 	}

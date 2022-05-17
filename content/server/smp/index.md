@@ -18,7 +18,7 @@ body_class: smp-status
                         <tr class="ping-disable-when-offline"><th>Version Running</th><td><span id="version">Loading...</span></td></tr>
                         <tr class="ping-disable-when-offline"><th>Players</th><td><span id="playercount">Loading...</span></td></tr>
                         <tr class="ping-disable-when-offline"><th>Map Name</th><td><span id="mapname">Loading...</span></td></tr>
-                        <!--<tr><th>Time Fetched</th><td><span id="timefetched">Loading...</span></td></tr>-->
+                        <tr><th>Time Fetched</th><td><span id="timefetched">Loading...</span></td></tr>
                         </tbody>
                     </table>
                     <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph</button>

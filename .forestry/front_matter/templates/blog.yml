@@ -5,7 +5,7 @@ fields:
 - name: title
   type: text
   config:
-    required: false
+    required: true
   label: Blog Title
 - name: date
   type: datetime
@@ -21,7 +21,7 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
@@ -39,3 +39,10 @@ fields:
 - name: sitemapExclude
   type: boolean
   label: Exclude From Sitemap
+- name: author
+  type: text
+  config:
+    required: true
+  label: Blog Author
+  description: Please don't write other people usernames other that the author.
+  default: World of SteelCraft

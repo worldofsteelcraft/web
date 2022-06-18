@@ -35,7 +35,7 @@ fields:
     maxSize: 64
   label: Thumbnail
   description: Add a custom thumbnail for your this blog.
-  default: "/images/preview-banhammer.png"
+  default: "/images/preview-knowledgebase.png"
 - name: permalink
   type: text
   config:

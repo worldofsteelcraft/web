@@ -40,6 +40,8 @@ fields:
 - name: sitemapExclude
   type: boolean
   label: Exclude From Sitemap
+  default: true
+  hidden: true
 - name: author
   type: text
   config:

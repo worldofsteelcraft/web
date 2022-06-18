@@ -28,7 +28,7 @@ fields:
   config:
     maxSize: 64
   label: Thumbnail
-  default: "/uploads/received_619623709203925.jpeg"
+  default: "/images/preview-banhammer.png"
 - name: sitemapExclude
   type: boolean
   label: Exclude From Sitemap

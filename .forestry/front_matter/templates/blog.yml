@@ -1,4 +1,41 @@
 ---
 label: Blog
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Blog Title
+- name: date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Page Description
+- name: customPagePreviewImageURL
+  type: file
+  config:
+    maxSize: 64
+  label: Thumbnail
+  description: Add a custom thumbnail for your this blog.
+- name: enableComments
+  type: boolean
+  label: Enable Comments
+  default: true
+- name: sitemapExclude
+  type: boolean
+  label: Exclude From Sitemap

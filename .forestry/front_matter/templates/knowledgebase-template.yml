@@ -1,4 +1,44 @@
 ---
 label: Knowledgebase Template
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Page Title
+- name: date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Publish Date
+  default: now
+  hidden: false
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Page Description
+  hidden: false
+- name: customPagePreviewImageURL
+  type: file
+  config:
+    maxSize: 64
+  label: Thumbnail
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+- name: sitemapExclude
+  type: boolean
+  label: Exclude from Sitemap
+  default: true

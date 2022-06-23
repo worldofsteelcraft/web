@@ -47,3 +47,5 @@ fields:
   label: Blog Author
   description: Please don't write other people usernames other that the author.
   default: World of SteelCraft
+pages:
+- content/season-download/season-9-world-download.md

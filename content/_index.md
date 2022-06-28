@@ -1,6 +1,9 @@
-{{define "main"}}
+---
+singlepage: true
+---
+{{<html>}}
 <div class="pagetitle padding-bottom">
-    <h1>{{ .Title }}</h1>
+    <h1>World of SteelCraft</h1>
     <p>The official website of World of SteelCraft were some information from server is shared to community members and newcomers.</p>		
 </div>
 <div id="pagecontent">
@@ -23,4 +26,4 @@
         </div>
     </div>
 </div>
-{{end}}
+{{</html>}}

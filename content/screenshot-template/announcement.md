@@ -6,8 +6,11 @@ sitemapExclude: true
 hideHeader: true
 hideFooter: true
 hideSidebar: true
+singlepage: true
 ---
+{{<html>}}
 <div class="ss-template-container">
 <img src="/images/logo.png" class="style-exclude" width="150px">
 {{< partial location="latest-announcements/full/1.html" >}}   
 </div>
+{{</html>}}

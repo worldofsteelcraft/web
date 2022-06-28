@@ -5,6 +5,7 @@ draft: false
 description: "Check the WoSC SMP Server Status here!"
 body_class: smp-status
 ---
+{{<html>}}
 <script src="/scripts/smp-query.js"></script>
 <div class="serverstatus pagetitle">
     <img src="/images/logo.png" class="style-exclude" width="150px">    
@@ -32,3 +33,4 @@ body_class: smp-status
 		<div class="padding"></div>
     </div>
 </div>
+{{</html>}}

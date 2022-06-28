@@ -6,7 +6,9 @@ sitemapExclude: true
 hideHeader: true
 hideFooter: true
 hideSidebar: true
+singlepage: true
 ---
+{{<html>}}
 <script src="/scripts/smp-query.js"></script>
 <div class="ss-template-container smp-status">
     <img src="/images/logo.png" class="style-exclude" width="150px">
@@ -33,3 +35,4 @@ hideSidebar: true
 </div>
 </div>
 </div>
+{{</html>}}

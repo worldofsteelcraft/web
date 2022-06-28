@@ -7,4 +7,5 @@ draft: true
 sitemapExclude: false
 customPagePreviewImage: false
 customPagePreviewImageURL:
+singlepage: true
 ---

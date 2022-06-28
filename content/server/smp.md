@@ -4,6 +4,7 @@ date: 2022-01-13T10:34:50+08:00
 draft: false
 description: "Check the WoSC SMP Server Status here!"
 body_class: smp-status
+singlepage: true
 ---
 {{<html>}}
 <script src="/scripts/smp-query.js"></script>
@@ -22,9 +23,9 @@ body_class: smp-status
                         <tr><th>Time Checked</th><td><span id="timefetched">Loading...</span></td></tr>
                         </tbody>
                     </table>
-                    <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph</button>
+                    <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph[Temporarilly Disabled]</button>
                     <div class="content" style="display:none;">
-                        <iframe id="playergraph" style="height:1110px; margin-top:-750px; border:10px #666 solid; border-radius:5px;" scrolling="no"  width="370px" loading="lazy"></iframe>
+                        <!--<iframe id="playergraph" style="height:1110px; margin-top:-730px !important; border:10px #666 solid; border-radius:5px; overflow-y: h" scrolling="no"  width="370px" loading="lazy"></iframe>-->
 			        </div>
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>

@@ -16,7 +16,7 @@ params:
     articleSnippetStyle: listStyle
   relatedArticle: 
     enable: true
-    articleSnippetStyle: boxstyle
+    articleSnippetStyle: listStyle
   copyrightyearStarted: 2021 
   copyrightyearToday: 2022
   copyrightHolder: World of SteelCraft/Scary Master Playz

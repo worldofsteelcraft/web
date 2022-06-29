@@ -23,10 +23,9 @@ singlepage: true
                         <tr><th>Time Checked</th><td><span id="timefetched">Loading...</span></td></tr>
                         </tbody>
                     </table>
-                    <button type="button" class="collapsible collapsible-notbig collapsible-fullwidth">Player Graph[Temporarilly Disabled]</button>
-                    <div class="content" style="display:none;">
-                        <!--<iframe id="playergraph" style="height:1110px; margin-top:-730px !important; border:10px #666 solid; border-radius:5px; overflow-y: h" scrolling="no"  width="370px" loading="lazy"></iframe>-->
-			        </div>
+                    {{<collapsible name="Player Graph" class="collapsible-notbig collapsible-fullwidth">}}
+                        <iframe id="playergraph" style="height:1075px; margin-top:-730px; border:5px #666 solid; border-radius:10px; width:360px;" scrolling="no"  loading="lazy"></iframe>
+                    {{</collapsible>}}
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>
                 </div>

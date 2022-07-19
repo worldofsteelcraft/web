@@ -31,6 +31,9 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 disqusShortName: worldofsteelcraft
+
+taxonomy:
+  authors: author
 menu:
   main:
   - identifier: home

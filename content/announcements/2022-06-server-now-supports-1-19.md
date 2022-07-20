@@ -4,7 +4,8 @@ date: 2022-06-08T05:09:07.853Z
 customPagePreviewImageURL: /images/preview.png
 enableComments: false
 sitemapExclude: true
-author: dplayzgames06
+author: 
+- dplayzgames06
 featured: true
 ---
 Following the 1.19.0 Update, Server now supports 1.19!\

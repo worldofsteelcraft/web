@@ -4,7 +4,8 @@ date: 2022-05-31T13:20:27.094Z
 customPagePreviewImageURL: /images/preview.png
 enableComments: false
 sitemapExclude: true
-author: dplayzgames06
+author: 
+- dplayzgames06
 featured: false
 ---
 Based on Minecraft tweets, and current pre-releases and betas, 1.19 will come at June 7, with unknown timezone yet.\

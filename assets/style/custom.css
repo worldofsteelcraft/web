@@ -1,12 +1,3 @@
-html{
-    background-color:#32e532;
-}
-@media (prefers-color-scheme: dark) {
-	/*page-dark-html*/
-	html{
-		background:#159d15;
-	}
-}
 .smp-status{
 background: rgb(52,153,69);
 	background: -moz-linear-gradient(131deg, rgba(52,153,69,1) 45%, rgba(85,85,255,1) 100%);

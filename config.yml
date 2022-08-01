@@ -6,8 +6,14 @@ params:
   description: World of SteelCraft is a server owned by Scary Master Playz which is currently managed by himself and other admins. We're welcoming Filipino Minecraft Players to join
   author: World of SteelCraft
   theme: 
-    backgroundcolor: "#32e532"
-    backgroundcolor_dark: "#159d15"
+    background:
+      color:
+        type: solid
+        lightdarkscheme: "true"
+        light:
+          color: "#32e532"
+        dark: 
+          color: "#159d15"
     pagePreviewImage: "/images/preview.png"
   identity:
     fbSDKID: 583745462831772

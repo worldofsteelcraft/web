@@ -120,3 +120,262 @@ menu:
     params:
       url: /season-download
     weight: 2
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - CMSCONFIG
+params:
+  cms:
+    backend:
+      name: git-gateway
+      branch: main
+    editorial_workflow: true
+    media_folder: "static/uploads"
+    public_folder: "uploads"
+    display_url: "https://worldofsteelcraft.tk"
+    logo_url: "/images/logo.png"
+    collections: 
+      - name: "blog"
+        label: Blog
+        folder: "content/blog"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+          - label: "Hide from Public"
+            name: featured
+            type: "boolean"
+            default: "true"
+      - name: "season-download"
+        label: "Season Download"
+        folder: "content/season-download"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "ban"
+        label: "Ban"
+        folder: "content/ban"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "rules"
+        label: "Rules"
+        folder: "content/rules"
+        create: false
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "true"
+            default: "true"
+      - name: "knowledgebase"
+        label: "Knowledgebase"
+        folder: "content/knowledgebase"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "donation-log"
+        label: "Donation Log (WIP)"
+        folder: "content/donation-log"
+        create: false
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "announcement"
+        label: "Announcements"
+        folder: "content/announcements"
+        create: true
+        slug: "{{year}}-{{month}}-{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+          - label: "Featured"
+            name: featured
+            type: "boolean"
+            default: "true" 

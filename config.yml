@@ -6,9 +6,18 @@ params:
   description: World of SteelCraft is a server owned by Scary Master Playz which is currently managed by himself and other admins. We're welcoming Filipino Minecraft Players to join
   author: World of SteelCraft
   theme: 
-    backgroundcolor: "#32e532"
-    backgroundcolor_dark: "#159d15"
+    background:
+      color:
+        type: solid
+        lightdarkscheme: "true"
+        light:
+          color: "#32e532"
+        dark: 
+          color: "#159d15"
     pagePreviewImage: "/images/preview.png"
+  comments:
+    enable: true
+    disqusShortName: worldofsteelcraft
   identity:
     fbSDKID: 583745462831772
     onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
@@ -29,12 +38,264 @@ params:
     rightholder: "World of SteelCraft/Scary Master Playz"
     notes: Elements of this website are owned by World of SteelCraft. Other third party copyrighted content are owned by their respective owners.
     managedByWhom: "Currently managed by [dpG06](https://dplayzgames06.tk)"
+  cms:
+    backend:
+      name: git-gateway
+      branch: main
+    editorial_workflow: true
+    media_folder: "static/uploads"
+    public_folder: "uploads"
+    display_url: "https://worldofsteelcraft.tk"
+    logo_url: "/images/logo.png"
+    collections: 
+      - name: "blog"
+        label: Blog
+        folder: "content/blog"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+          - label: "Hide from Public"
+            name: featured
+            type: "boolean"
+            default: "true"
+      - name: "season-download"
+        label: "Season Download"
+        folder: "content/season-download"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "ban"
+        label: "Ban"
+        folder: "content/ban"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "rules"
+        label: "Rules"
+        folder: "content/rules"
+        create: false
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "true"
+            default: "true"
+      - name: "knowledgebase"
+        label: "Knowledgebase"
+        folder: "content/knowledgebase"
+        create: true
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "donation-log"
+        label: "Donation Log (WIP)"
+        folder: "content/donation-log"
+        create: false
+        slug: "{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Description"
+            name: "description"
+            type: "string"
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+      - name: "announcement"
+        label: "Announcements"
+        folder: "content/announcements"
+        create: true
+        slug: "{{year}}-{{month}}-{{slug}}"
+        fields: 
+          - label: "Title"
+            name: title
+            type: "string"
+          - label : "Publish Date"
+            name: date
+            type: datetime
+            picker_utc: "false"
+          - label: Body
+            name: body
+            type: markdown
+          - label: "Permalink"
+            name: "permalink"
+            type: "string"
+          - label: "Custom Preview Image"
+            name: customPagePreview
+            type: "image"
+            required: "false"
+            default: "/images/preview.png"
+          - label: "Exclude from Sitemap"
+            name: sitemapExclude
+            type: boolean
+            required: "false"
+            default: "true"
+          - label: "Blog Author"
+            name: author
+            type: list
+            required: "true"
+          - label: "Featured"
+            name: featured
+            type: "boolean"
+            default: "true" 
 enableGitInfo: true
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-disqusShortName: worldofsteelcraft
+
 
 taxonomy:
   authors: author
@@ -114,3 +375,9 @@ menu:
     params:
       url: /season-download
     weight: 2
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - CMSCONFIG

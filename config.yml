@@ -15,6 +15,9 @@ params:
         dark: 
           color: "#159d15"
     pagePreviewImage: "/images/preview.png"
+  comments:
+    enable: true
+    disqusShortName: worldofsteelcraft
   identity:
     fbSDKID: 583745462831772
     onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
@@ -292,7 +295,7 @@ enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-disqusShortName: worldofsteelcraft
+
 
 taxonomy:
   authors: author

@@ -11,14 +11,14 @@
 </p>
  
 This is the repository of website World of SteelCraft uses.  
-Based on [Hugo](https://gohugo.io), a static site generator, [Forestry.io](https://forestry.io) as the backend and our own theme, keeping the old design
+Based on [Hugo](https://gohugo.io), a static site generator and a theme that is designed to ours, keeping the old design
 
 ## Dependencies
 These are the dependencies of this website.
 - [Hugo](https://gohugo.io)
-- [Forestry.io](https://forestry.io)
-- [Disqus](https://disqus.com)
 - [codenamecore Theme](https://github.com/dplayz/codenamecore)
+  - [Disqus](https://disqus.com) - Comment Service
+  - [Netlify CMS](https://netlifycms.org) - Content Management
 
 ## Contributing
 If you want to contribute to the project, please consider the following:
@@ -31,7 +31,6 @@ Your contribution still matters, but it might be only appreciated by the members
 
 Here is what to follow:
 - Please create another branch for feature other than **main** to let us test your work before merging to main
-- When forking, if you want to stop receiving emails from GitHub Action that the action failed, or do not want to setup a GitHub Action to push to your website, kindly disable your github actions on your repository.
 - You can help us on keeping code quality by cleaning the code or recommending solutions that is more optimized.
 
 ## Contact Information:

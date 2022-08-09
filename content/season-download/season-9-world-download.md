@@ -5,6 +5,7 @@ draft: false
 permalink: /season-download/season-9
 description: Season 9 is the ninth season of World of SteelCraft SMP that
   takes about 2 months. The season started on January 17 and ended on February 25.
+enableComments: true
 ---
 Season 9 is the seventh Season of World of SteelCraft SMP that takes about 2 months. The season started on January 17 and ended on February 25.
 

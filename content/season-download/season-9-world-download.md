@@ -15,9 +15,9 @@ Season 9 is the seventh Season of World of SteelCraft SMP that takes about 2 mon
 These are the world download links to play:
 
 | Mirror | Link |
-| --- | --- |
-| WoSC Files | [Download Here](https://files.worldofsteelcraft.tk/files/smp/download/WoSCSMPS9-Earth.mcworld) |
-| MediaFire | [Download Here](https://www.mediafire.com/file/qwdn8zqmucfhc6k/WoSCSMPS9-Earth.mcworld/file) |
-| Mega.nz | [Download Here](https://mega.nz/file/hYR1UJRD#rpNw1lBxTVPThgtmSX4VN0V84UP5ToUi51v4doZS-58)|
+|-|-|
+| WoSC Files | [Download Here](https://wosc.tk/WoSCSMPS9-GD) | 
+| MediaFire | [Download Here](https://wosc.tk/WoSCSMPS9-MF) |
+|Mega.nz| [Download Here](https://wosc.tk/WoSCSMPS9-MG)|
 
 </div>

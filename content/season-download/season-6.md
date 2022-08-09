@@ -5,6 +5,7 @@ date: 2021-08-12T06:01:01Z
 description: "Season 6 is the sixth Season of World of SteelCraft SMP that takes about 2 months. The season started on June 9 2021 and ended on August 6 2021. It is one of the most populated seasons."
 draft: false
 permalink: /season-download/season-6
+enableComments: true
 ---
 Season 6 is the sixth Season of World of SteelCraft SMP that takes about 2 months. The season started on June 9 2021 and ended on August 6 2021. It is one of the most populated seasons.
 

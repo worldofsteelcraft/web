@@ -32,6 +32,11 @@ params:
   relatedArticle: 
     enable: true
     articleSnippetStyle: listStyle
+  psa:
+    enable: true
+    largedesign: false
+    color: "#32e532"
+    content: "Thank you **MCCPH** for being a home when we start WoSC."
   copyright:
     start: 2021
     today: 2022

@@ -2,6 +2,7 @@
 title: Season 2 World Download
 date: 2021-03-02T05:26:01.000Z
 draft: false
+enableComments: true
 permalink: /season-download/season-2
 customPagePreviewImageURL: /uploads/816198497321222154.png
 description: Season 2 is the second Season of World of SteelCraft SMP that takes

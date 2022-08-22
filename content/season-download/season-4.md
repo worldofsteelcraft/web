@@ -9,6 +9,7 @@ description: Season 4 is the fourth Season of World of SteelCraft SMP that takes
   2021. This is considered as bad season because cheaters came to destroy the
   community.
 category: page
+enableComments: true
 ---
 Season 4 is the fourth Season of World of SteelCraft SMP that takes about 1 month. The season started on January 1, 2021 and ended on February 1, 2021. This is considered as bad season because cheaters came to destroy the community.
 

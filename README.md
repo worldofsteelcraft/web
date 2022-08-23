@@ -17,7 +17,6 @@ These are the dependencies of this website.
 - [Hugo](https://gohugo.io)
 - [codenamecore Theme](https://github.com/dplayz/codenamecore)
   - [Disqus](https://disqus.com) - Comment Service
-  - [Netlify CMS](https://netlifycms.org) - Content Management
 
 ## Contributing
 If you want to contribute to the project, please consider the following:

@@ -1,5 +1,6 @@
 # .github/workflows/preview.yml
 name: Deploy PR previews
+permissions: write-all
 
 on:
   pull_request:

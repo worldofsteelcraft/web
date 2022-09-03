@@ -33,4 +33,3 @@ Here is what to follow:
 
 ## Contact Information:
 Please check [organization's README.md](https://github.com/worldofsteelcraft/.github/blob/main/profile/README.md) for more information
-

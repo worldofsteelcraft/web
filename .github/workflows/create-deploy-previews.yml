@@ -3,7 +3,6 @@ name: Deploy PR previews
 
 on:
   pull_request:
-  permissions: write-all
     types:
       - opened
       - reopened
@@ -14,6 +13,7 @@ concurrency: pr-${{ github.event.number }}
 
 jobs:
   deploy-preview:
+    permissions: write-all
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout

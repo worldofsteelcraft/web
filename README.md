@@ -10,7 +10,7 @@
 </p>
  
 This is the repository of website World of SteelCraft uses.  
-Based on [Hugo](https://gohugo.io), a static site generator and a theme that is designed to ours, keeping the old design
+Based on [Hugo](https://gohugo.io), a static site generator and a theme that is designed to ours, keeping the old design.
 
 ## Dependencies
 These are the dependencies of this website.

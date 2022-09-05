@@ -13,10 +13,11 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PR
-        uses: dawidd6/action-checkout-pr@v1
+      - uses: actions/checkout@v3
         with:
-          pr: ${{github.event.number}}
+          ref: ${{ github.event.pull_request.head.sha }}
+          submodules: true
+          fetch-depth: 0
       #- uses: actions/checkout@v2
       #  with:
       #    fetch-depth: 0

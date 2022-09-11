@@ -13,9 +13,14 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout PR
+        uses: dawidd6/action-checkout-pr@v1
         with:
-          submodules: 'true'
+          pr: ${{github.event.number}}
+      #- uses: actions/checkout@v2
+      #  with:
+      #    fetch-depth: 0
+      #    submodules: 'true'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:

@@ -145,7 +145,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "yarn run tinacms build && hugo build --minify"
+    "build": "yarn run tinacms build && hugo --minify"
   },
   "repository": {
     "type": "git",

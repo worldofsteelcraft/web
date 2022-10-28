@@ -4,9 +4,9 @@ import { defineStaticConfig } from "tinacms";
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineStaticConfig({
-  branch,
-  clientId: "82e22a7f-b99f-4479-8c6d-7593f2a83ad0", 
-  token: "efb70c9f48b04dc26d7a2d04129d389e7983b467", 
+  branch: "main",
+  clientId: "256cfe44-43db-45eb-9f62-395d5ce0fae0", 
+  token: "1ea2b43efa7c85f0c6401c414ca14509372ffdc9", 
   build: {
     outputFolder: "admin",
     publicFolder: "static",

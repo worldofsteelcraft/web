@@ -145,7 +145,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "yarn run tinacms build && hugo build --minify"
   },
   "repository": {
     "type": "git",

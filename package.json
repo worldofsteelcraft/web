@@ -1,5 +1,5 @@
 {
-  "name": "wosc_web",
+  "name": "woscweb",
   "version": "1.0.0",
   "description": "<p align=\"center\" width=\"20px\">\r   <img src=\"https://github.com/worldofsteelcraft/woscweb/blob/c84badfd9047d38cfd16be168ec1d3de88e57854/themes/WoSCWebCore/static/images/logo.png\" alt=\"logo\" width=\"25%\"/><br>  \r   <h1 align=\"center\">World of SteelCraft Website</h1>\r   <p align=\"center\">\r   <a href=\"https://github.com/worldofsteelcraft/woscweb/commits/main\"><img src=\"https://img.shields.io/maintenance/yes/2022?style=plastic\" alt=\"actively maintaned\"></a>\r   <a href=\"https://github.com/worldofsteelcraft/woscweb/blob/main/LICENSE\"><img src=\"https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png\" alt=\"licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License\"></a>\r     <br>\r     <a href=\"worldofsteelcraft.tk\"><img src=\"https://img.shields.io/website?down_color=red&down_message=offline&label=WoSC%20Website&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fworldofsteelcraft.tk\" alt=\"Website Status\"></a>\r   </p>\r </p>",
   "main": "index.js",
@@ -149,13 +149,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dplayz/woscweb.git"
+    "url": "git+https://github.com/worldofsteelcraft/web.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
-    "url": "https://github.com/dplayz/woscweb/issues"
+    "url": "https://github.com/worldofsteelcraft/web/woscweb/issues"
   },
-  "homepage": "https://github.com/dplayz/woscweb#readme"
+  "homepage": "https://worldofsteelcraft.tk"
 }

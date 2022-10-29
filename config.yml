@@ -32,10 +32,6 @@ params:
   relatedArticle: 
     enable: true
     articleSnippetStyle: listStyle
-  psa:
-    enable: true
-    color: "#32e532"
-    content: "Vote a useful mob on [Minecraft Live 2022](https://minecraft.net/live)"
   copyright:
     start: 2021
     today: 2022

@@ -32,6 +32,16 @@ params:
   relatedArticle: 
     enable: true
     articleSnippetStyle: listStyle
+  cms:
+    backend:
+      name: github
+      github:
+        repo: worldofsteelcraft/web
+        branch: main
+        useGraphQL: true
+        auth_endpoint: /api/auth
+    media_folder: "static/uploads"
+    public_folder: "/uploads"
   copyright:
     start: 2021
     today: 2022
@@ -128,3 +138,5 @@ outputs:
   home:
     - HTML
     - RSS
+    - MANIFEST
+    - CMSCONFIG

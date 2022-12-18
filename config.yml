@@ -1,38 +1,15 @@
-baseURL: 'https://worldofsteelcraft.tk/'
 languageCode: en-us
-title: World of SteelCraft
 theme: codenamecore
 params:
-  description: World of SteelCraft is a server owned by Scary Master Playz which is currently managed by himself and other admins. We're welcoming Filipino Minecraft Players to join
-  author: World of SteelCraft
-  theme: 
-    background:
-      color:
-        type: solid
-        lightdarkscheme: true
-        solid:
-          light:
-            color: "#32e532"
-          dark: 
-            color: "#159d15"
-    pagePreviewImage: "/images/preview.png"
-  comments:
-    enable: true
-    disqusShortName: worldofsteelcraft
-  identity:
-    fbSDKID: 583745462831772
-    onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
-    yandexValidationCode: d0d38a41ae470764
-    googleanalytics:
-      measurementID: G-ZRTDYP4L7W
-  devBranchNotice:
-    enable: true
-    bugReportURL: https://github.com/dplayz/codenamecore
-  sectionList: 
+  sectionList:
     articleSnippetStyle: listStyle
-  relatedArticle: 
-    enable: true
-    articleSnippetStyle: listStyle
+  copyright:
+    start: 2021
+    today: 2022
+    rightholder: World of SteelCraft/Scary Master Playz
+    notes: Elements of this website are owned by World of SteelCraft. Other third
+      party copyrighted content are owned by their respective owners.
+    managedByWhom: Currently managed by [dpG06](https://dplayzgames06.tk)
   cms:
     backend:
       name: github
@@ -41,103 +18,206 @@ params:
         branch: main
         useGraphQL: true
         auth_endpoint: /api/auth
-    media_folder: "static/uploads"
-    public_folder: "/uploads"
-  copyright:
-    start: 2021
-    today: 2022
-    rightholder: "World of SteelCraft/Scary Master Playz"
-    notes: Elements of this website are owned by World of SteelCraft. Other third party copyrighted content are owned by their respective owners.
-    managedByWhom: "Currently managed by [dpG06](https://dplayzgames06.tk)"
-enableGitInfo: true
+    media_folder: static/uploads
+    public_folder: /uploads
+    collections:
+      - folder: content/announcements
+        create: true
+        useDefaultFields: true
+        label: Announcements
+        name: announcements
+      - folder: content/ban
+        create: true
+        useDefaultFields: true
+        label: Member Ban
+        name: ban
+      - folder: content/season-download
+        create: true
+        useDefaultFields: true
+        label: Season Download
+        name: season-download
+      - folder: content/knowledgebase
+        create: true
+        useDefaultFields: true
+        label: Knowledgebase
+        name: knowledgebase
+      - folder: content/rules
+        create: false
+        useDefaultFields: true
+        label: Rules
+        name: rules
+      - folder: content/blog
+        create: true
+        useDefaultFields: true
+        label: Blog
+        name: blog
+  theme:
+    background:
+      color:
+        type: solid
+        lightdarkscheme: true
+        solid:
+          light:
+            color: "#32e532"
+          dark:
+            color: "#159d15"
+    pagePreviewImage: /images/preview.png
+  author: World of SteelCraft
+  relatedArticle:
+    enable: true
+    articleSnippetStyle: listStyle
+  devBranchNotice:
+    enable: true
+    bugReportURL: https://github.com/dplayz/codenamecore
+  comments:
+    enable: true
+    disqusShortName: worldofsteelcraft
+  description: World of SteelCraft is a server owned by Scary Master Playz which
+    is currently managed by himself and other admins. We're welcoming Filipino
+    Minecraft Players to join
+  identity:
+    fbSDKID: 583745462831772
+    onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
+    yandexValidationCode: d0d38a41ae470764
+    googleanalytics:
+      measurementID: G-ZRTDYP4L7W
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
-buildExpired: false
-
-
 taxonomy:
   authors: author
-menu:
-  main:
-  - identifier: home
-    name: Home
-    params:
-      url: /
-    weight: 1
-  - identifier: community-dropdown
-    name: Community 
-    weight: 2
-  - identifier: banlist
-    name: Banned Members
-    parent: community-dropdown
-    params:
-      url: /ban
-    weight: 1
-  - identifier: memberlist
-    name: Member List
-    parent: community-dropdown
-    params:
-      url: /member-list
-    weight: 2
-  - identifier: badgelist
-    name: Badge
-    parent: community-dropdown
-    params:
-      url: /badge
-    weight: 3
-  - identifier: Knowledgebase
-    name: Knowledgebase
-    parent: community-dropdown
-    params:
-      url: /knowledgebase
-    weight: 4
-  - identifier: rules-dropdown
-    name: Rules
-    weight: 3
-  - identifier: rules-en
-    name: English Rules
-    parent: rules-dropdown
-    params:
-      url: /rules/en
-    weight: 1
-  - identifier: rules-fil
-    name: Filipino Rules
-    parent: rules-dropdown
-    params:
-      url: /rules/fil
-    weight: 2
-  - identifier: rules-en-basic
-    name: Basic English Rules
-    parent: rules-dropdown
-    params:
-      url: /rules/en-basic
-    weight: 3
-  - identifier: rules-fil-basic
-    name: Basic Filipino Rules
-    parent: rules-dropdown
-    params:
-      url: /rules/fil-basic
-    weight: 4
-  - identifier: server-dropdown
-    name: Server
-    weight: 4
-  - identifier: wosc-smp
-    name: WoSC SMP
-    parent: server-dropdown
-    params:
-      url: /server/smp
-    weight: 1
-  - identifier: season-download
-    name: Season Downloads
-    parent: server-dropdown
-    params:
-      url: /season-download
-    weight: 2
-
 outputs:
   home:
     - HTML
     - RSS
     - MANIFEST
     - CMSCONFIG
+buildExpired: false
+baseURL: https://worldofsteelcraft.tk/
+title: World of SteelCraft
+enableGitInfo: true
+menu:
+  main:
+    - identifier: home
+      name: Home
+      params:
+        url: /
+      weight: 1
+    - identifier: community-dropdown
+      name: Community
+      weight: 2
+    - identifier: banlist
+      name: Banned Members
+      parent: community-dropdown
+      params:
+        url: /ban
+      weight: 1
+    - identifier: memberlist
+      name: Member List
+      parent: community-dropdown
+      params:
+        url: /member-list
+      weight: 2
+    - identifier: badgelist
+      name: Badge
+      parent: community-dropdown
+      params:
+        url: /badge
+      weight: 3
+    - identifier: Knowledgebase
+      name: Knowledgebase
+      parent: community-dropdown
+      params:
+        url: /knowledgebase
+      weight: 4
+    - identifier: rules-dropdown
+      name: Rules
+      weight: 3
+    - identifier: rules-en
+      name: English Rules
+      parent: rules-dropdown
+      params:
+        url: /rules/en
+      weight: 1
+    - identifier: rules-fil
+      name: Filipino Rules
+      parent: rules-dropdown
+      params:
+        url: /rules/fil
+      weight: 2
+    - identifier: rules-en-basic
+      name: Basic English Rules
+      parent: rules-dropdown
+      params:
+        url: /rules/en-basic
+      weight: 3
+    - identifier: rules-fil-basic
+      name: Basic Filipino Rules
+      parent: rules-dropdown
+      params:
+        url: /rules/fil-basic
+      weight: 4
+    - identifier: server-dropdown
+      name: Server
+      weight: 4
+    - identifier: wosc-smp
+      name: WoSC SMP
+      parent: server-dropdown
+      params:
+        url: /server/smp
+      weight: 1
+    - identifier: season-download
+      name: Season Downloads
+      parent: server-dropdown
+      params:
+        url: /season-download
+      weight: 2
+  footer:
+    - identifier: community
+      name: "Community:"
+      params:
+        links:
+          - name: Member List
+            url: /member-list
+          - name: Community Member Badge
+            url: /badge
+          - name: Status Page
+            url: https://status.worldofsteelcraft.tk
+    - identifier: admin
+      name: "Admin:"
+      params:
+        links:
+          - name: WoSC Data Sheet
+            url: https://docs.google.com/spreadsheets/d/1B-b4DVKOoPPDkpAHgLbBY5y3GSPstsf9hvuSvLMR8xo/edit
+          - name: Website Source Code
+            url: https://github.com/worldofsteelcraft/web
+          - name: Content Manager
+            url: /admin
+    - identifier: followUs
+      name: "Follow us:"
+      params:
+        links:
+          - name: Facebook Page
+            url: https://facebook.com/worldofsteelcraft
+          - name: Tiktok Account
+            url: https://tiktok.com/@worldofsteelcraft
+          - name: Youtube Channel
+            url: https://youtube.com/@worldofsteelcraft
+          - name: Twitter Account
+            url: https://twitter.com/wosctwt
+    - identifier: contact
+      name: "Contact Us:"
+      params:
+        links:
+          - name: Admin Mail
+            url: mailto:admins@worldofsteelcraft.tk
+          - name: Facebook Messenger
+            links:
+              - name: WoSC Messenger
+                url: https://m.me/worldofsteelcraft
+              - name: Scary Master Playz Messenger
+                url: https://m.me/scarymasterFB
+              - url: https://m.me/dplayzgames06
+                name: dplayz Games Messenger
+          - name: Discord Server
+            url: https://discord.gg/DEMvpNuyXx

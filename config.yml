@@ -9,7 +9,7 @@ params:
     background:
       color:
         type: solid
-        lightdarkscheme: "true"
+        lightdarkscheme: true
         solid:
           light:
             color: "#32e532"

@@ -79,7 +79,7 @@ params:
     fbSDKID: 583745462831772
     onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
     yandexValidationCode: d0d38a41ae470764
-    googleanalytics:
+    googleAnalytics:
       measurementID: G-ZRTDYP4L7W
 enableRobotsTXT: false
 buildDrafts: false

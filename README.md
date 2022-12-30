@@ -2,7 +2,7 @@
   <img src="https://github.com/worldofsteelcraft/woscweb/blob/c84badfd9047d38cfd16be168ec1d3de88e57854/themes/WoSCWebCore/static/images/logo.png" alt="logo" width="25%"/><br>  
   <h1 align="center">World of SteelCraft Website</h1>
   <p align="center">
-  <a href="https://github.com/worldofsteelcraft/woscweb/commits/main"><img src="https://img.shields.io/maintenance/yes/2022?style=plastic" alt="actively maintaned"></a>
+  <a href="https://github.com/worldofsteelcraft/woscweb/commits/main"><img src="https://img.shields.io/maintenance/yes/2023?style=plastic" alt="actively maintaned"></a>
   <a href="https://github.com/worldofsteelcraft/woscweb/blob/main/LICENSE"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"></a>
     <br>
     <a href="worldofsteelcraft.tk"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=WoSC%20Website&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fworldofsteelcraft.tk" alt="Website Status"></a>
@@ -14,9 +14,10 @@ Based on [Hugo](https://gohugo.io), a static site generator and a theme that is 
 
 ## Dependencies
 These are the dependencies of this website.
-- [Hugo](https://gohugo.io)
+- [Hugo](https://gohugo.io) - Website Builder
 - [codenamecore Theme](https://github.com/dplayz/codenamecore)
   - [Disqus](https://disqus.com) - Comment Service
+  - [Netlify CMS](https://netlifycms.org) - Content Management
 
 ## Contributing
 If you want to contribute to the project, please consider the following:

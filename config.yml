@@ -52,6 +52,8 @@ params:
         label: Blog
         name: blog
   theme:
+    themeColor: 
+      light: "#32e532"
     background:
       color:
         type: solid

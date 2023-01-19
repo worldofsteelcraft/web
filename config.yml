@@ -1,7 +1,8 @@
 languageCode: en-us
-languageCode: en-us
 theme: codenamecore
 params:
+  sectionList:
+    articleSnippetStyle: listStyle
   copyright:
     start: 2021
     today: 2023
@@ -53,6 +54,7 @@ params:
         name: blog
   theme:
 <<<<<<< HEAD
+<<<<<<< HEAD
     textColor:
       noDarkMode: true
     themeColor:
@@ -63,6 +65,8 @@ params:
       relatedArticle:
         enable: true
         articleSnippetStyle: listStyle
+=======
+>>>>>>> ed06165 (Revert "bump")
     themeColor: 
 >>>>>>> cc178ee (bump)
       light: "#32e532"
@@ -84,6 +88,9 @@ params:
         enable: true
         articleSnippetStyle: listStyle
   author: World of SteelCraft
+  relatedArticle:
+    enable: true
+    articleSnippetStyle: listStyle
   devBranchNotice:
     enable: true
     bugReportURL: https://github.com/dplayz/codenamecore

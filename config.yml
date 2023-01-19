@@ -1,8 +1,6 @@
 languageCode: en-us
 theme: codenamecore
 params:
-  sectionList:
-    articleSnippetStyle: listStyle
   copyright:
     start: 2021
     today: 2023
@@ -52,6 +50,12 @@ params:
         label: Blog
         name: blog
   theme:
+    list: 
+      relatedArticle:
+        enable: true
+        articleSnippetStyle: listStyle
+      sectionList:
+        articleSnippetStyle: listStyle
     themeColor: 
       light: "#32e532"
       dark: "#159d15"
@@ -66,9 +70,6 @@ params:
             color: "#159d15"
     pagePreviewImage: /images/preview.png
   author: World of SteelCraft
-  relatedArticle:
-    enable: true
-    articleSnippetStyle: listStyle
   devBranchNotice:
     enable: true
     bugReportURL: https://github.com/dplayz/codenamecore

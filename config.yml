@@ -1,8 +1,6 @@
 languageCode: en-us
 theme: codenamecore
 params:
-  sectionList:
-    articleSnippetStyle: listStyle
   copyright:
     start: 2021
     today: 2023
@@ -18,6 +16,7 @@ params:
         branch: main
         useGraphQL: true
         auth_endpoint: /api/auth
+    logo_url: /images/logo.png
     media_folder: static/uploads
     public_folder: /uploads
     collections:
@@ -52,7 +51,13 @@ params:
         label: Blog
         name: blog
   theme:
-    themeColor: 
+    list:
+      relatedArticle:
+        enable: true
+        articleSnippetStyle: listStyle
+      sectionList:
+        articleSnippetStyle: listStyle
+    themeColor:
       light: "#32e532"
       dark: "#159d15"
     background:
@@ -66,9 +71,6 @@ params:
             color: "#159d15"
     pagePreviewImage: /images/preview.png
   author: World of SteelCraft
-  relatedArticle:
-    enable: true
-    articleSnippetStyle: listStyle
   devBranchNotice:
     enable: true
     bugReportURL: https://github.com/dplayz/codenamecore
@@ -79,11 +81,21 @@ params:
     is currently managed by himself and other admins. We're welcoming Filipino
     Minecraft Players to join
   identity:
-    fbSDKID: 583745462831772
-    onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
-    yandexValidationCode: d0d38a41ae470764
-    googleAnalytics:
-      measurementID: G-ZRTDYP4L7W
+    sdk:
+      fbSDKID: 583745462831772
+      onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
+    webmaster:
+      yandexValidationCode: d0d38a41ae470764
+    analytics:
+      googleAnalytics:
+        measurementID: G-ZRTDYP4L7W
+    general:
+      defaultAuthor:
+        name: World of SteelCraft
+      pagePreviewImage: /images/preview.png
+      description: World of SteelCraft is a server owned by Scary Master Playz which
+        is currently managed by himself and other admins. We're welcoming
+        Filipino Minecraft Players to join
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false

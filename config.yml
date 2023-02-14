@@ -57,6 +57,8 @@ params:
         articleSnippetStyle: listStyle
       sectionList:
         articleSnippetStyle: listStyle
+    textColor:
+      noDarkMode: true
     themeColor:
       light: "#32e532"
       dark: "#159d15"
@@ -70,6 +72,12 @@ params:
           dark:
             color: "#159d15"
     pagePreviewImage: /images/preview.png
+    list:
+      sectionList:
+        articleSnippetStyle: listStyle
+      relatedArticle:
+        enable: true
+        articleSnippetStyle: listStyle
   author: World of SteelCraft
   relatedArticle:
     enable: true
@@ -84,6 +92,7 @@ params:
     is currently managed by himself and other admins. We're welcoming Filipino
     Minecraft Players to join
   identity:
+<<<<<<< HEAD
     sdk:
       fbSDKID: 583745462831772
       onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
@@ -99,6 +108,16 @@ params:
       description: World of SteelCraft is a server owned by Scary Master Playz which
         is currently managed by himself and other admins. We're welcoming
         Filipino Minecraft Players to join
+=======
+    fbSDKID: 583745462831772
+    onesignalSDKID: b1a79808-64a9-404e-9861-53a8ce9775c6
+    yandexValidationCode: d0d38a41ae470764
+    googleAnalytics:
+      measurementID: G-ZRTDYP4L7W
+    general:
+      defaultAuthor:
+        name: World of SteelCraft
+>>>>>>> c5ddeb2 (bump)
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false

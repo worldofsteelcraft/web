@@ -52,7 +52,9 @@ params:
         label: Blog
         name: blog
   theme:
-    themeColor: 
+    textColor:
+      noDarkMode: true
+    themeColor:
       light: "#32e532"
       dark: "#159d15"
     background:
@@ -65,6 +67,12 @@ params:
           dark:
             color: "#159d15"
     pagePreviewImage: /images/preview.png
+    list:
+      sectionList:
+        articleSnippetStyle: listStyle
+      relatedArticle:
+        enable: true
+        articleSnippetStyle: listStyle
   author: World of SteelCraft
   relatedArticle:
     enable: true
@@ -84,6 +92,9 @@ params:
     yandexValidationCode: d0d38a41ae470764
     googleAnalytics:
       measurementID: G-ZRTDYP4L7W
+    general:
+      defaultAuthor:
+        name: World of SteelCraft
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false

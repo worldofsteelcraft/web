@@ -12,7 +12,7 @@ params:
     backend:
       name: github
       github:
-        repo:f worldofsteelcraft/web
+        repo: worldofsteelcraft/web
         branch: main
         useGraphQL: true
         auth_endpoint: /api/auth

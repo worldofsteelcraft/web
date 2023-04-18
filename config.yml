@@ -98,6 +98,17 @@ params:
       description: World of SteelCraft is a server owned by Scary Master Playz which
         is currently managed by himself and other admins. We're welcoming
         Filipino Minecraft Players to join
+  psa: 
+    enable: true
+    entries:
+    - oneTime: true
+      id: system-notice-1
+      content: Our SMP Host is currently having problems right now, please bear with us. 
+      buttonText: Okay
+    - oneTime: true
+      id: admin-notice-1
+      content: Admins are currently busy with their lives right now, but services (SMP, Website) is still actively maintained. Check [Status Page](https://status.worldofsteelcraft.tk) for service status, and wait patiently when you message us. 
+      buttonText: Okay
 enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false

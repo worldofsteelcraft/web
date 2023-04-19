@@ -13,7 +13,7 @@ singlepage: true
             <p>A SMP Server founded and owned by Scary Master Playz that was started from July 27, 2020, growing and has 20+ friendly members.</p>
         </div>
         <div class="column">
-            <a class="button button-green" href="/server/smp/">Server Info</a><a class="button button-green" href="https://wosc.tk/smp-save">Join server(Members Only)</a></a>
+            <a class="button button-green" href="/server/smp/"><i class="fa fa-server"></i>  Server Info</a><a class="button button-green" href="https://wosc.tk/smp-save"><i class="fa-solid fa-gamepad"></i>  Join server(Members Only)</a></a>
         </div>
     </div>            
     <div id="homepage-woscsmpseasondlsection" class="row padding border">
@@ -22,7 +22,7 @@ singlepage: true
             <p>Every Season end, we provide download links for the members so they can check their builds, items and others after the season change.</p>
         </div>
         <div class="column">
-            <a class="button button-seasondownloaddirect" href="/season-download/season-8/">Season 8 Download</a><a class="button button-green" href="/season-download">Season Download</a>
+            <a class="button button-seasondownloaddirect" href="/season-download/season-8/"><i class="fa-solid fa-download"></i>  Season 8 Download</a><a class="button button-green" href="/season-download"><i class="fa-solid fa-download"></i> Season Download</a>
         </div>
     </div>
 </div>

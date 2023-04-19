@@ -13,14 +13,14 @@ singlepage: true
                 <noscript>This service won't work until you enable Javascript, Please Enable it</noscript>
                     <div class="serverstatuspanel">
                     <table>
-                        <tbody><tr><th>Server IP Address</th><td><span id="hostname">Loading... </span></td></tr>
-                        <tr><th>Server Port</th><td><span id="port">Loading...</span></td></tr>
-                        <tr><th>Status</th><td><div id="isonline">Loading...</div></td></tr>
-                         <tr class="ping-disable-when-offline"><th>MOTD</th><td><span id="motd">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th>Version Running</th><td><span id="version">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th>Players</th><td><span id="playercount">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th>Map Name</th><td><span id="mapname">Loading...</span></td></tr>
-                        <tr><th>Time Checked</th><td><span id="timefetched">Loading...</span></td></tr>
+                        <tbody><tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><span id="hostname">Loading... </span></td></tr>
+                        <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><span id="port">Loading...</span></td></tr>
+                        <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline">Loading...</div></td></tr>
+                         <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-circle-info"></i>  MOTD</th><td><span id="motd">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-code-branch"></i>  Version Running</th><td><span id="version">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-people-group"></i>  Players</th><td><span id="playercount">Loading...</span></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-cube"></i> Map Name</th><td><span id="mapname">Loading...</span></td></tr>
+                        <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><span id="timefetched">Loading...</span></td></tr>
                         </tbody>
                     </table>
                     {{<collapsible name="Player Graph" class="collapsible-notbig collapsible-fullwidth">}}
@@ -29,7 +29,7 @@ singlepage: true
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>
                 </div>
-                <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save">Join server(Members Only)</a>
+                <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save"><i class="fa-solid fa-gamepad"></i>  Join server(Members Only)</a>
 		<div class="padding"></div>
     </div>
 </div>

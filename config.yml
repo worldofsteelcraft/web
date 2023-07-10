@@ -287,6 +287,7 @@ menu:
     - identifier: followUs
       name: "Follow us:"
       params:
+        iconClass: fa-solid fa-heart fa-beat
         links:
           - name: Facebook Page
             url: https://facebook.com/worldofsteelcraft
@@ -299,6 +300,7 @@ menu:
     - identifier: contact
       name: "Contact Us:"
       params:
+        iconClass: fa-solid fa-address-book
         links:
           - name: Admin Mail
             url: mailto:admins@worldofsteelcraft.tk

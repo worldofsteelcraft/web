@@ -88,7 +88,7 @@ params:
       visited: lightblue
     font:
       family: Roboto, Helvetica, Arial, sans-serif, Times New Roman
-    thirdPartyIcons:
+    iconFonts:
       fontawesome:
         enable: true
         type: cdnjs
@@ -130,17 +130,17 @@ params:
     enable: true
     entries:
       - oneTime: true
-        id: system-notice-1
-        content: Our SMP Host is currently having problems right now, please bear with
-          us.
-        buttonText: Okay
-      - oneTime: true
         id: admin-notice-1
         content: Admins are currently busy with their lives right now, but services
           (SMP, Website) is still actively maintained. Check [Status
           Page](https://status.worldofsteelcraft.tk) for service status, and
           wait patiently when you message us.
         buttonText: Okay
+        details: |
+          Admins are currently busy with their lives right now, but services
+          (SMP, Website) is still actively maintained. Check [Status
+          Page](https://status.worldofsteelcraft.tk) for service status, and
+          wait patiently when you message us.
   disableFeature:
     IEChecks: false
     googleTranslate: false
@@ -170,20 +170,20 @@ menu:
       name: Home
       params:
         url: /
-        thirdPartyIconClass: fa-solid fa-home
+        iconClass: fa-solid fa-home
       weight: 1
     - identifier: community-dropdown
       name: Community
       weight: 2
       params:
         url: /
-        thirdPartyIconClass: fa-solid fa-users-line
+        iconClass: fa-solid fa-users-line
     - identifier: banlist
       name: Banned Members
       parent: community-dropdown
       params:
         url: /ban
-        thirdPartyIconClass: fa-solid fa-ban
+        iconClass: fa-solid fa-ban
       weight: 1
       
     - identifier: memberlist
@@ -191,81 +191,81 @@ menu:
       parent: community-dropdown
       params:
         url: /member-list
-        thirdPartyIconClass: fa-solid fa-table-list
+        iconClass: fa-solid fa-table-list
       weight: 2
     - identifier: badgelist
       name: Badge
       parent: community-dropdown
       params:
         url: /badge
-        thirdPartyIconClass: fa-solid fa-certificate
+        iconClass: fa-solid fa-certificate
       weight: 3
     - identifier: Knowledgebase
       name: Knowledgebase
       parent: community-dropdown
       params:
         url: /knowledgebase
-        thirdPartyIconClass: fa-solid fa-book
+        iconClass: fa-solid fa-book
       weight: 4
     - identifier: rules-dropdown
       name: Rules
       weight: 3
       params:
         url: /
-        thirdPartyIconClass: fa-solid fa-scale-balanced
+        iconClass: fa-solid fa-scale-balanced
     - identifier: rules-en
       name: English Rules
       parent: rules-dropdown
       params:
         url: /rules/en
-        thirdPartyIconClass: fa-solid fa-scale-balanced
+        iconClass: fa-solid fa-scale-balanced
       weight: 1
     - identifier: rules-fil
       name: Filipino Rules
       parent: rules-dropdown
       params:
         url: /rules/fil
-        thirdPartyIconClass: fa-solid fa-scale-balanced
+        iconClass: fa-solid fa-scale-balanced
       weight: 2
     - identifier: rules-en-basic
       name: Basic English Rules
       parent: rules-dropdown
       params:
         url: /rules/en-basic
-        thirdPartyIconClass: fa-solid fa-scale-balanced
+        iconClass: fa-solid fa-scale-balanced
       weight: 3
     - identifier: rules-fil-basic
       name: Basic Filipino Rules
       parent: rules-dropdown
       params:
         url: /rules/fil-basic
-        thirdPartyIconClass: fa-solid fa-scale-balanced
+        iconClass: fa-solid fa-scale-balanced
       weight: 4
     - identifier: server-dropdown
       name: Server
       weight: 4
       params:
         url: /
-        thirdPartyIconClass: fa-solid fa-server
+        iconClass: fa-solid fa-server
     - identifier: wosc-smp
       name: WoSC SMP
       parent: server-dropdown
       params:
         url: /server/smp
-        thirdPartyIconClass: fa-solid fa-cube
+        iconClass: fa-solid fa-cube
       weight: 1
     - identifier: season-download
       name: Season Downloads
       parent: server-dropdown
       params:
         url: /season-download
-        thirdPartyIconClass: fa-solid fa-download
+        iconClass: fa-solid fa-download
       weight: 2
   footer:
     - identifier: community
       name: "Community:"
       params:
-        thirdPartyIconClass: fa-solid fa-users-line
+        iconClass: fa-solid fa-users-line
         links:
           - name: Member List
             url: /member-list
@@ -276,7 +276,7 @@ menu:
     - identifier: admin
       name: "Admin:"
       params:
-        thirdPartyIconClass: fa-solid fa-user-gear
+        iconClass: fa-solid fa-user-gear
         links:
           - name: WoSC Data Sheet
             url: https://docs.google.com/spreadsheets/d/1B-b4DVKOoPPDkpAHgLbBY5y3GSPstsf9hvuSvLMR8xo/edit

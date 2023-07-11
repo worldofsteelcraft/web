@@ -96,6 +96,12 @@ params:
           kitName: d238301b93
         cdnjs:
           version: 6.4.2
+    sidebar:
+      enable: true
+      entries:
+        - legacy:
+            usePartial: true
+            partialPath: sidebar.html
   author: World of SteelCraft
   devBranchNotice:
     enable: true
@@ -185,7 +191,6 @@ menu:
         url: /ban
         iconClass: fa-solid fa-ban
       weight: 1
-      
     - identifier: memberlist
       name: Member List
       parent: community-dropdown

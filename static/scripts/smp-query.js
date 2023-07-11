@@ -2,8 +2,8 @@
 jQuery(document).ready(function ( $ ){
 	setTimeout(myTimer, 1);
 	function myTimer() {
-		$('#playergraph').attr('src','https://bedrockinfo.com/data/smp.worldofsteelcraft.tk:25579');  /* Here */
-		$.getJSON('https://api.bedrockinfo.com/v2/status?server=smp.worldofsteelcraft.tk&port=25579', function(data) { 
+		$('#playergraph').attr('src','https://bedrockinfo.com/data/smp.worldofsteelcraft.tk:25584');  /* Here */
+		$.getJSON('https://api.bedrockinfo.com/v2/status?server=smp.worldofsteelcraft.tk&port=25584', function(data) { 
 			$('#isonline').empty();
 			$('#isoffline-sstemplate-css').empty();
 			$('#isoffline-sstemplate-text').empty();

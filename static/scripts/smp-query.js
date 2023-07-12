@@ -11,12 +11,13 @@ jQuery(document).ready(function ( $ ){
 			$('#hostname').text(data.HostName);
 			$('#port').text(data.IPv4Port);
 			$('#version').text(data.Version);
-			$('#mapname').text(data.LevelName); 
+			var mapname = MinecraftText.toHTML(data.LevelName);
+			$('#mapname').html(mapname); 
 			if (data.Online == true) {
-				$('#isonline').append('<img src="/images/serveronline.png" width="12px"><span>Online</span>');
+				$('#isonline').append('<img src="/images/serveronline.png" width="12px">&nbsp;<span>Online</span>');
 				}	
 			else {
-				$('#isonline').append('<img src="/images/serveroffline.png" width="12px"><span>Offline</span>');
+				$('#isonline').append('<img src="/images/serveroffline.png" width="12px">&nbsp;<span>Offline</span>');
 				$('#isofflinecss').append('<style>tr.ping-disable-when-offline{display:none;}</style>');
 				$('#isoffline-sstemplate-css').append('<style>.serverstatus-sstemplate-content{display:none;}</style>');
 				$('#isoffline-sstemplate-text').append('<p><b>Server is offline, please check for maintenance notice.</b></p>');
@@ -25,7 +26,8 @@ jQuery(document).ready(function ( $ ){
 			var checkTimeStampProcessed = new Date();
 			checkTimeStampProcessed.setTime(unixTime * 1000);
 			$('#playercount').text(data.Players +'/'+ data.MaxPlayers );
-			$('#motd').text(data.ServerName);
+			var motd = MinecraftText.toHTML(data.ServerName);
+			$('#motd').html(motd);
 			$('#timefetched').text(checkTimeStampProcessed);
 			if (data.Online == true) {
 				console.log("Data Fetched from API Successfully" + "\n" + "\n" + "Data Processed:" + "\n" + "IP: "+ data.HostName + "\n" + "Port: "+ data.IPv4Port + "\n" + "Online: "+ data.Online + "\n" + "Players: "+ data.Players +'/'+ data.MaxPlayers + "\n" + "Server Version: "+ data.Version + "\n" + "MOTD: "+ data.ServerName + "\n" + "Map Name: "+ data.LevelName + "\n" +"Time Processed: " + checkTimeStampProcessed );}

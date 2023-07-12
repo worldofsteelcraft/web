@@ -7,20 +7,32 @@ body_class: smp-status
 singlepage: true
 ---
 {{<html>}}
+<script src="/scripts/minecraft_text/minecraft_text.min.js"></script>
 <script src="/scripts/smp-query.js"></script>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+<style>
+    div.APIResponseDataContainer{
+        font-family: 'MinecraftiaRegular';
+        background-color:black; color:white; 
+        border-radius:5px; 
+        padding:2px 5px; 
+        line-break: anywhere;
+        display:inline-block;
+    }
+</style>
 <div class="serverstatus pagetitle">
     <img src="/images/logo.png" class="style-exclude" width="150px">    
                 <noscript>This service won't work until you enable Javascript, Please Enable it</noscript>
                     <div class="serverstatuspanel">
                     <table>
-                        <tbody><tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><span id="hostname">Loading... </span></td></tr>
-                        <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><span id="port">Loading...</span></td></tr>
-                        <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline">Loading...</div></td></tr>
-                         <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-circle-info"></i>  MOTD</th><td><span id="motd">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-code-branch"></i>  Version Running</th><td><span id="version">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-people-group"></i>  Players</th><td><span id="playercount">Loading...</span></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-cube"></i> Map Name</th><td><span id="mapname">Loading...</span></td></tr>
-                        <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><span id="timefetched">Loading...</span></td></tr>
+                        <tbody><tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><div class="APIResponseDataContainer"><span id="hostname">Loading... </span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><div class="APIResponseDataContainer"><span id="port">Loading...</span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline" class="APIResponseDataContainer">Loading...</div></td></tr>
+                         <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-circle-info"></i>  MOTD</th><td><div class="APIResponseDataContainer"><span id="motd">Loading...</span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-code-branch"></i>Version Running</th><td><div class="APIResponseDataContainer"><span id="version">Loading...</span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-people-group"></i> Players</th><td><div class="APIResponseDataContainer"><span id="playercount">Loading...</span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-cube"></i> Map Name</th><td><div class="APIResponseDataContainer"><span id="mapname">Loading...</span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><div class="APIResponseDataContainer"><span id="timefetched">Loading...</span></div></td></tr>
                         </tbody>
                     </table>
                     {{<collapsible name="Player Graph" class="collapsible-notbig collapsible-fullwidth">}}
@@ -33,4 +45,3 @@ singlepage: true
 		<div class="padding"></div>
 </div>
 {{</html>}}
-## WoSC

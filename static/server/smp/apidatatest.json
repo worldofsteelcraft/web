@@ -1,0 +1,15 @@
+{
+  "CheckTimeStamp": 1689142386,
+  "GameMode": "Survival",
+  "HostName": "apidatatest.wosc.tk",
+  "IPAddress": "193.228.225.106",
+  "IPv4Port": 25584,
+  "IPv6Port": 19133,
+  "LastSeen": 1689142386,
+  "LevelName": "§2WoSCSMP§lS11",
+  "MaxPlayers": 30,
+  "Online": true,
+  "Players": 30.5,
+  "ServerName": "[S11] WoSC SMP Server",
+  "Version": "1.1.1"
+}

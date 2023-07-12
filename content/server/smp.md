@@ -31,6 +31,6 @@ singlepage: true
                 </div>
                 <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save"><i class="fa-solid fa-gamepad"></i>  Join server(Members Only)</a>
 		<div class="padding"></div>
-    </div>
 </div>
 {{</html>}}
+## WoSC

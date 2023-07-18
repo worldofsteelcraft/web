@@ -131,7 +131,6 @@ params:
         is currently managed by himself and other admins. We're welcoming
         Filipino Minecraft Players to join
       logo: /images/logo.png
-      favicon: favicon.ico
   psa:
     enable: true
     entries:

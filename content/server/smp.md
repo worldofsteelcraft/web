@@ -10,7 +10,23 @@ singlepage: true
 <script src="/scripts/minecraft_text/minecraft_text.min.js"></script>
 <script src="/scripts/smp-query.js"></script>
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
-<style>
+<style>  
+div.serverstatus{
+    max-width:800px;
+    margin:auto;
+}
+table.serverstatus-data-table{
+    background: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/brown-dirt-minecraft-pattern_thumb.jpg");   
+    min-width:95%;
+    width:95%;
+    border:none !important;
+    color:white; 
+    border-radius: 10px;
+    max-width:800px;
+}
+table.server-data-table tr, table.server-data-table td, table.server-data-table th, table.server-data-table {
+    border:unset !important;
+} 
     div.APIResponseDataContainer{
         font-family: 'MinecraftiaRegular';
         background-color:black; color:white; 
@@ -24,7 +40,7 @@ singlepage: true
     <img src="/images/logo.png" class="style-exclude" width="150px">    
                 <noscript>This service won't work until you enable Javascript, Please Enable it</noscript>
                     <div class="serverstatuspanel">
-                    <table>
+                    <table class="serverstatus-data-table">
                         <tbody><tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><div class="APIResponseDataContainer"><span id="hostname">Loading... </span></div></td></tr>
                         <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><div class="APIResponseDataContainer"><span id="port">Loading...</span></div></td></tr>
                         <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline" class="APIResponseDataContainer">Loading...</div></td></tr>

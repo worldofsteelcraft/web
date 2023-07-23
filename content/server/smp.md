@@ -42,6 +42,37 @@ singlepage: true
                     <style>div.serverstatuspanel{width:100%;}</style>
                 </div>
                 <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save"><i class="fa-solid fa-gamepad"></i>  Join server(Members Only)</a>
-		<div class="padding"></div>
 </div>
 {{</html>}}
+
+***
+{{<homepage/side-by-side>}}
+    {{<homepage/content >}}
+        <h1>Sample heading 1</h1>
+        <p>Sample description 1</p>
+    {{</homepage/content>}} 
+    {{<homepage/content>}}
+        <img src="/images/preview.png" width="100%">
+    {{</homepage/content>}}
+    {{<homepage/content>}}
+    <img src="/images/preview.png" width="100%">
+    {{</homepage/content>}}
+    {{<homepage/content >}}
+        <h1>Sample heading 2</h1>
+        <p>Sample description 2</p>
+    {{</homepage/content>}} 
+    {{<homepage/content >}}
+    <h1>Sample heading 3</h1>
+    <p>Sample description 3</p>
+    {{</homepage/content>}} 
+    {{<homepage/content>}}
+    <img src="/images/preview.png" width="100%">
+    {{</homepage/content>}}
+        {{<homepage/content>}}
+    <img src="/images/preview.png" width="100%">
+    {{</homepage/content>}}
+    {{<homepage/content >}}
+        <h1>Sample heading 4</h1>
+        <p>Sample description 4</p>
+    {{</homepage/content>}} 
+{{</homepage/side-by-side>}}

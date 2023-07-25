@@ -92,3 +92,32 @@ table.server-data-table tr, table.server-data-table td, table.server-data-table 
         <p>Sample description 4</p>
     {{</homepage/content>}} 
 {{</homepage/side-by-side>}}
+
+# Meet the admins and moderators!
+{{<homepage/grid>}}
+    {{<homepage/content >}}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPNyGMEfFDPHr-Gzfz1WYvpmumRsPx8pcIJd4JRe0zQ&s" width="50%">
+        <h1>Admin 1</h1>
+        <p>Sample description 1</p>
+    {{</homepage/content>}} 
+    {{<homepage/content >}}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPNyGMEfFDPHr-Gzfz1WYvpmumRsPx8pcIJd4JRe0zQ&s" width="50%">
+        <h1>Admin 2</h1>
+        <p>Sample description 2</p>
+    {{</homepage/content>}} 
+    {{<homepage/content >}}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPNyGMEfFDPHr-Gzfz1WYvpmumRsPx8pcIJd4JRe0zQ&s" width="50%">
+        <h1>Admin 3</h1>
+        <p>Sample description 3</p>
+    {{</homepage/content>}} 
+    {{<homepage/content >}}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPNyGMEfFDPHr-Gzfz1WYvpmumRsPx8pcIJd4JRe0zQ&s" width="50%">
+        <h1>Admin 4</h1>
+        <p>Sample description 4</p>
+    {{</homepage/content>}} 
+    {{<homepage/content >}}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPNyGMEfFDPHr-Gzfz1WYvpmumRsPx8pcIJd4JRe0zQ&s" width="50%">
+        <h1>Moderator 1</h1>
+        <p>Sample description 5</p>
+    {{</homepage/content>}} 
+{{</homepage/grid>}}

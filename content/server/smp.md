@@ -24,7 +24,7 @@ table.serverstatus-data-table{
     border-radius: 10px;
     max-width:800px;
 }
-table.server-data-table tr, table.server-data-table td, table.server-data-table th, table.server-data-table {
+div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverstatus td{
     border:unset !important;
 } 
     div.APIResponseDataContainer{
@@ -35,20 +35,41 @@ table.server-data-table tr, table.server-data-table td, table.server-data-table 
         line-break: anywhere;
         display:inline-block;
     }
-</style>
-<div class="serverstatus pagetitle">
-    <img src="/images/logo.png" class="style-exclude" width="150px">    
-                <noscript>This service won't work until you enable Javascript, Please Enable it</noscript>
+    /* Code: https://codepen.io/thetallweeks/pen/yybGra */
+    .loading-text:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+        animation: ellipsis steps(4,end) 900ms infinite;
+        content: "\2026"; /* ascii code for the ellipsis character */
+        width: 0px;
+    }
+    @keyframes ellipsis {
+        to {
+        width: 1.25em;    
+        }
+    }
+    @-webkit-keyframes ellipsis {
+        to {
+        width: 1.25em;    
+        }
+    }
+    </style>
+<div class="serverstatus pagetitle">  
+                <noscript>Whoops! The server information block won't work until you enable Javascript, Please Enable it <style>div.serverstatuspanel{display:none;}</style></noscript>
                     <div class="serverstatuspanel">
                     <table class="serverstatus-data-table">
-                        <tbody><tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><div class="APIResponseDataContainer"><span id="hostname">Loading... </span></div></td></tr>
-                        <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><div class="APIResponseDataContainer"><span id="port">Loading...</span></div></td></tr>
-                        <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline" class="APIResponseDataContainer">Loading...</div></td></tr>
-                         <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-circle-info"></i>  MOTD</th><td><div class="APIResponseDataContainer"><span id="motd">Loading...</span></div></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-code-branch"></i>Version Running</th><td><div class="APIResponseDataContainer"><span id="version">Loading...</span></div></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-people-group"></i> Players</th><td><div class="APIResponseDataContainer"><span id="playercount">Loading...</span></div></td></tr>
-                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-cube"></i> Map Name</th><td><div class="APIResponseDataContainer"><span id="mapname">Loading...</span></div></td></tr>
-                        <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><div class="APIResponseDataContainer"><span id="timefetched">Loading...</span></div></td></tr>
+                        <tbody>
+                        <tr><td colspan="2"><img src="/images/logo.png" class="style-exclude" width="150px"><br><h3>SMP Server Information</h3></td></tr>
+                        <tr><th><i class="fa-solid fa-server"></i>  Server IP Address</th><td><div class="APIResponseDataContainer"><span id="hostname"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-server"></i>  Server Port</th><td><div class="APIResponseDataContainer"><span id="port"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-signal"></i>  Status</th><td><div id="isonline" class="APIResponseDataContainer"><div class="loading-text">Loading</div></div></td></tr>
+                         <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-circle-info"></i>  MOTD</th><td><div class="APIResponseDataContainer"><span id="motd"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-code-branch"></i>Version Running</th><td><div class="APIResponseDataContainer"><span id="version"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-people-group"></i> Players</th><td><div class="APIResponseDataContainer"><span id="playercount"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr class="ping-disable-when-offline"><th><i class="fa-solid fa-cube"></i> Map Name</th><td><div class="APIResponseDataContainer"><span id="mapname"><div class="loading-text">Loading</div></span></div></td></tr>
+                        <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><div class="APIResponseDataContainer"><span id="timefetched"><div class="loading-text">Loading</div></span></div></td></tr>
                         </tbody>
                     </table>
                     {{<collapsible name="Player Graph" class="collapsible-notbig collapsible-fullwidth">}}

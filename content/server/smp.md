@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "SMP Server"
 date: 2022-01-13T10:34:50+08:00
 draft: false
@@ -28,6 +29,7 @@ div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverst
     border:unset !important;
 } 
     div.APIResponseDataContainer{
+        font-display: swap;
         font-family: 'MinecraftiaRegular';
         background-color:black; color:white; 
         border-radius:5px; 
@@ -72,8 +74,8 @@ div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverst
                         <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><div class="APIResponseDataContainer"><span id="timefetched"><div class="loading-text">Loading</div></span></div></td></tr>
                         </tbody>
                     </table>
-                    {{<collapsible name="Player Graph" class="collapsible-notbig collapsible-fullwidth">}}
-                        <iframe id="playergraph" style="height:1075px; margin-top:-730px; border:5px #666 solid; border-radius:10px; width:360px;" scrolling="no"  loading="lazy"></iframe>
+                    {{<collapsible name="Player Graph (temporary disabled)" class="collapsible-notbig collapsible-fullwidth">}}
+                        <!--iframe id="playergraph" style="height:1075px; margin-top:-730px; border:5px #666 solid; border-radius:10px; width:360px;" scrolling="no"  loading="lazy"></iframe-->
                     {{</collapsible>}}
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>

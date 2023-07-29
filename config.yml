@@ -132,6 +132,9 @@ params:
         Filipino Minecraft Players to join
       logo: /images/logo.png
   psa:
+    remoteAPI:
+      enable: true
+      url: http://link.worldofsteelcraft.tk/announcementAPI
     enable: true
     entries:
       - oneTime: true
@@ -146,6 +149,7 @@ params:
           (SMP, Website) is still actively maintained. Check [Status
           Page](https://status.worldofsteelcraft.tk) for service status, and
           wait patiently when you message us.
+        expire: "2023-07-30T22:04:30+0800"
   disableFeature:
     IEChecks: false
     googleTranslate: false

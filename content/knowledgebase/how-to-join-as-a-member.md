@@ -1,4 +1,5 @@
 ---
+pageType: wiki
 category: post
 title: How to join as a member?
 date: 2021-08-12T10:41:00.000Z

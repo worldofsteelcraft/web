@@ -1,0 +1,219 @@
+<style>
+    table, tr {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align:center;
+      overflow-y: auto;
+      width:100%;
+    }
+</style>
+<table id="memberBadgesTable">
+    <tr>
+        <th onclick="sortTable(0)">ID</th>
+        <th onclick="sortTable(1)">Username</th>
+        <th>Badges Earned</th></tr>
+</table>
+
+<script async>
+// THANK YOU https://gist.github.com/rmruano/4638071
+// I ALMOST CRIED FINDING SOLUTION ABOUT CORS
+
+newCorsXHR = function(type, url) {
+  var xhr = false;
+  try {
+     xhr = new XMLHttpRequest();
+  } catch(e) {}
+  if (xhr && "withCredentials" in xhr) { 
+      xhr.open(type, url, true); // Standard Cors request
+  } else if (typeof XDomainRequest != "undefined") { 
+      xhr = new XDomainRequest(); // IE Cors request
+      xhr.open(type, url);
+      xhr.onload = function() {
+      	this.readyState = 4;
+      	if (this.onreadystatechange instanceof Function) this.onreadystatechange();
+      };
+  } else if (xhr) {
+  	xhr.open(type, url, true);
+  };
+  return xhr;
+};
+
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+var xhr = newCorsXHR("GET","http://localhost:7281/api/index.json"); 
+} else {
+var xhr = newCorsXHR("GET","https://profile-data.worldofsteelcraft.tk/api/index.json"); 
+}
+// Set up a function to handle the response
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        var list = JSON.parse(xhr.responseText);
+        var trStart = "<tr>";
+        var trClose = "</tr>";
+
+        
+          list.forEach(function(obj, index) {
+              var profileId = "<td>" + obj.id + "</td>";
+              var usernameId = "<td>" + obj.username + "</td>";
+
+              var badgesArray = obj.badges;
+              if (badgesArray && Array.isArray(badgesArray)) {
+                  var badgesEarned = "<td>";
+                  badgesArray.forEach(function(badgeName) {
+                      var urlizedBadgeName = badgeName.replace(/\s+/g, '_');
+                      badgesEarned += `<img src="/images/badges/${urlizedBadgeName}.png" alt="Badge" width="50" height="50">`;
+                  });
+                  badgesEarned += "</td>";
+              } else {
+                badgesEarned = "<td>No Badges yet</td>";
+                console.log = `${obj.username} doesn't have any badges.`
+              }
+
+
+              var div = trStart + 
+                  profileId + usernameId + badgesEarned + 
+                  trClose;
+              document.querySelector('#memberBadgesTable').insertAdjacentHTML('beforeend', div);
+
+          });
+
+    } else {
+        // Handle the error here
+    }
+};
+
+// Send the request
+xhr.send();
+</script>
+
+
+
+<script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("memberBadgesTable");
+      switching = true;
+      // Set the sorting direction to ascending:
+      dir = "asc";
+      /* Make a loop that will continue until
+      no switching has been done: */
+      while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+          // Start by saying there should be no switching:
+          shouldSwitch = false;
+          /* Get the two elements you want to compare,
+          one from current row and one from the next: */
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /* Check if the two rows should switch place,
+          based on the direction, asc or desc: */
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /* If a switch has been marked, make the switch
+          and mark that a switch has been done: */
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          // Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /* If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again. */
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+</script>
+
+<script>
+    function sortTablePosition(n){
+        var predefinedValues = {
+        "admin": 1,
+        "moderator": 2,
+        "member": 3,
+        "banned": 4,
+        "left": 5
+      };
+      table = document.getElementById("memberBadgesTable");
+      sortTablePredefined(n, table, predefinedValues);
+    };
+</script>
+
+<script>
+    function sortTablePredefined(n, table, predefinedValues) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+
+      switching = true;
+      // Set the sorting direction to ascending:
+      dir = "asc";
+      /* Make a loop that will continue until
+      no switching has been done: */
+      while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+          // Start by saying there should be no switching:
+          shouldSwitch = false;
+          /* Get the two elements you want to compare,
+          one from the current row and one from the next: */
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /* Get the numeric values corresponding to the innerHTML of x and y: */
+          var xValue = predefinedValues[x.innerHTML.toLowerCase()] || 0;
+          var yValue = predefinedValues[y.innerHTML.toLowerCase()] || 0;
+          /* Check if the two rows should switch place,
+          based on the direction, asc or desc: */
+          if (dir === "asc") {
+            if (xValue > yValue) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir === "desc") {
+            if (xValue < yValue) {
+              // If so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /* If a switch has been marked, make the switch
+          and mark that a switch has been done: */
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          // Each time a switch is done, increase this count by 1:
+          switchcount++;
+        } else {
+          /* If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again. */
+          if (switchcount === 0 && dir === "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+</script>

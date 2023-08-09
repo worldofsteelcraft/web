@@ -1,0 +1,251 @@
+<div id="profileSnippet">
+    <table id="profileSnippetTable">
+        <tr><th colspan="2">{{.Params.username}}</th></tr>
+    </table>
+</div>
+<style>
+        table#profileSnippetTable tbody tr td div .tab img{
+            width:100% !important;
+            margin:auto;
+        }
+        @media (max-width: 800px){
+        div.profilePageGrid{
+            display:block;
+        }
+        div#profileSnippet{
+            width:75%;
+            margin:auto;
+        }
+        table#profileSnippetTable tbody tr td div .tab img{
+            width:50% !important;
+            margin:auto;
+        } 
+    }
+    
+
+    div#profileSnippet{
+        background-color:#32e532;
+        min-height:350px;
+        border-radius: 10px;
+        padding:5px;
+        word-wrap: break-word;
+    }
+    div#profileSnippet td, div#profileSnippet th {
+        word-break: break-word;
+    }
+    div#profileSnippet th {
+        width:40%;
+    }
+    div#profileSnippet img {
+        padding:unset !important;
+    }
+    div#profileSnippet table, div#profileSnippet tr, div#profileSnippet td, div#profileSnippet th{
+        border:unset !important;
+    }
+    div#profileSnippet .tabs {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+    div#profileSnippet .tabs label {
+        padding:0.75rem 0.75rem;
+    }
+    div#profileSnippet .tabs input[type="radio"]:checked + label {
+        border-bottom: #319df5 solid 5px !important;
+        background-color: unset !important;
+
+    }
+@media(prefers-color-scheme:dark){  
+    div#profileSnippet .tabs [class^="tab"] {
+    border-top:unset;
+    background: transparent;
+  }
+  div#profileSnippet .tabs {
+    background-color: rgba(68, 68, 68, 0.40) !important;
+    width:100%;
+  }
+}
+</style>
+
+<script>
+// THANK YOU https://gist.github.com/rmruano/4638071
+// I ALMOST CRIED FINDING SOLUTION ABOUT CORS
+
+newCorsXHR = function(type, url) {
+  var xhr = false;
+  try {
+     xhr = new XMLHttpRequest();
+  } catch(e) {}
+  if (xhr && "withCredentials" in xhr) { 
+      xhr.open(type, url, true); // Standard Cors request
+  } else if (typeof XDomainRequest != "undefined") { 
+      xhr = new XDomainRequest(); // IE Cors request
+      xhr.open(type, url);
+      xhr.onload = function() {
+      	this.readyState = 4;
+      	if (this.onreadystatechange instanceof Function) this.onreadystatechange();
+      };
+  } else if (xhr) {
+  	xhr.open(type, url, true);
+  };
+  return xhr;
+};
+
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+var xhr = newCorsXHR("GET","http://localhost:7281/api/index.json"); 
+} else {
+var xhr = newCorsXHR("GET","https://profile-data.worldofsteelcraft.tk/api/index.json"); 
+}
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        var list = JSON.parse(xhr.responseText);
+
+        var targetName = "{{.Params.username}}"; // The name you want to target
+        var userObj = list.find(obj => obj.username === targetName);
+
+        var trStart = "<tr>";
+        var trClose = "</tr>";
+
+        if (typeof userObj.picture !== 'undefined' && userObj.picture !== null ) {
+            var userPfpContainer = "<td colspan=2>";
+            userPfpContainer += "<div class='tabs' id='profilePictures'>";
+            
+            if (typeof userObj.picture.logoImg !== 'undefined' && userObj.picture.logoImg !== null) {
+                userPfpContainerChecked = {
+                    logo: "checked='checked'",
+                    skinHead: "",
+                    skinBody: "",
+                }
+            } else if (typeof userObj.picture.skinHeadImg !== 'undefined' && userObj.picture.skinHeadImg !== null) {
+                userPfpContainerChecked = {
+                    logo: "",
+                    skinHead: "checked='checked'",
+                    skinBody: "",
+                }
+            } else {
+                userPfpContainerChecked = {
+                    logo: "",
+                    skinHead: "",
+                    skinBody: "checked='checked'",
+                }
+            }
+            if (typeof userObj.picture.logoImg !== 'undefined' && userObj.picture.logoImg !== null) {
+                userPfpContainer += `<input type='radio' name='profilePictures' id='profilePictures-logo' ${userPfpContainerChecked.logo} >`
+                userPfpContainer += "<label for='profilePictures-logo'>Logo</label>"
+                userPfpContainer += `<div class='tab'><img width="100%" src="${userObj.picture.logoImg}"></div>`;
+            }
+            
+            if (typeof userObj.picture.skinHeadImg !== 'undefined' && userObj.picture.skinHeadImg !== null) {
+                userPfpContainer += `<input type='radio' name='profilePictures' id='profilePictures-pfp' ${userPfpContainerChecked.skinHead}>`
+                userPfpContainer += "<label for='profilePictures-pfp'>Head</label>"
+                userPfpContainer += `<div class='tab'><img width="100%" src="${userObj.picture.skinHeadImg}"></div>`;
+            }
+
+            if (typeof userObj.picture.skinBodyImg !== 'undefined' && userObj.picture.skinBodyImg !== null) {
+                userPfpContainer += `<input type='radio' name='profilePictures' id='profilePictures-skin' ${userPfpContainerChecked.skinBody}>`
+                userPfpContainer += "<label for='profilePictures-skin'>Body</label>"
+                userPfpContainer += `<div class='tab'><img width="100%" src="${userObj.picture.skinBodyImg}"></div>`;
+            }
+
+            userPfpContainer += "</div>"
+            userPfpContainer += "</td>"
+        } else {
+            var userPfpContainer = "";
+        }
+
+
+
+        var profileId = "<th> Profile ID </th>"+ "<td>" + userObj.id + "</td>";
+        var username = "<th> Username </th>"+ "<td>" + userObj.username + "</td>";
+        var seasonJoined = "<th> Season Joined </th>"+ "<td>" + userObj.joinInfo.joinSeason + "</td>";
+        var position = userObj.position.charAt(0).toUpperCase() + userObj.position.slice(1);
+            position = "<th> Membership Position </th>"+ "<td>" + position + "</td>";
+        
+        
+        var badgesArray = userObj.badges;
+        if (badgesArray && Array.isArray(badgesArray)) {
+            var badgesEarned = "";
+            console.log(badgesArray)
+            badgesArray.forEach(function(badgeName) {
+                var urlizedBadgeName = badgeName.replace(/\s+/g, '_');
+                badgesEarned += `<img src="/images/badges/${urlizedBadgeName}.png" alt="${badgeName}" aria-description=${badgeName} width="50" height="50">`;
+            });
+        } else {
+        var badgesEarned = "No Badges yet";
+        console.log = `${userObj.username} doesn't have any badges.`
+        }
+
+        var badgesArray = userObj.badges;
+        if (badgesArray && Array.isArray(badgesArray)) {
+            var badgesEarned = "";
+            console.log(badgesArray)
+            badgesArray.forEach(function(badgeName) {
+                var urlizedBadgeName = badgeName.replace(/\s+/g, '_');
+                badgesEarned += `<img src="/images/badges/${urlizedBadgeName}.png" alt="${badgeName}" aria-description='${badgeName}' style=';min-width:50px; min-height:50px'>`;
+            });
+        } else {
+        var badgesEarned = "No Badges received yet";
+        console.log = `${userObj.username} doesn't have any badges.`
+        }
+
+        var aliasArray = userObj.alias;
+        if (aliasArray && Array.isArray(aliasArray)) {
+        if (aliasArray && Array.isArray(aliasArray)) {
+        var aliasList = "<tr><th colspan='2'>Known as:</th></td>";
+            aliasList += "<tr><td colspan='2'><table style='margin:0; !important' width='100%'>";
+                aliasArray.forEach(function(aliasName) {
+                aliasList += `<tr><td style='text-align:center;'>${aliasName} </td> </tr>`;
+            });
+            aliasList += "</table></td></tr>";
+            } 
+        } else { 
+            var aliasList = "";
+        }
+
+        var previousUsernamesArray = userObj.previousUsernames;
+        if (previousUsernamesArray && Array.isArray(previousUsernamesArray)) {
+        if (previousUsernamesArray && Array.isArray(previousUsernamesArray)) {
+        var previousUsernamesList = "<tr><th colspan='2'>Previous Usernames Used</th></td>";
+            previousUsernamesList += "<tr><td colspan='2'><table style='margin:0; !important' width='100%'>";
+            previousUsernamesArray.forEach(function(previousUsername) {
+                previousUsernamesList += `<tr><td style='text-align:center;'>${previousUsername} </td> </tr>`;
+            });
+            previousUsernamesList += "</table></td></tr>";
+            } 
+        } else { 
+            var previousUsernamesList = "";
+        }
+        if (typeof userObj.quote !== 'undefined' && userObj.quote !== null ) {
+            var quote = ""
+                quote += trStart
+                quote += `<td colspan=2 style='text-align:center; font-size:20px; padding:20px 0px;'><i>&#8220;${userObj.quote}&#8221;</i></td>`
+                quote += trClose
+        } else {
+            var quote = ""
+        }
+        var div = 
+            trStart + userPfpContainer + trClose + 
+            trStart + profileId + trClose + 
+            trStart + username + trClose +
+            trStart + position + trClose +
+            trStart + seasonJoined + trClose +
+            aliasList +
+            trStart + "<th colspan='2'>Badges Earned</th>" + trClose +
+            trStart + "<td colspan='2' style='text-align:center;'>" + badgesEarned +"</td>" + trClose +
+            previousUsernamesList +
+            quote
+            ;
+        document.querySelector('#profileSnippetTable').insertAdjacentHTML('beforeend', div);
+
+
+        console.log(list);
+        console.log(userObj);
+
+    } else {
+        // Handle the error here
+    }
+};
+
+// Send the request
+xhr.send();
+
+</script>
+    

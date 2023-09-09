@@ -88,9 +88,12 @@ newCorsXHR = function(type, url) {
   };
   return xhr;
 };
+var fetchFromPublicProfileServer = sessionStorage.getItem("fetchFromPublicProfileServer");
 
-if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+if (fetchFromPublicProfileServer !== "true" && location.hostname === "localhost" || location.hostname === "127.0.0.1" ){
 var xhr = newCorsXHR("GET","http://localhost:7281/api/index.json"); 
+var displayPublicProfileServerSwitch = true;
+console.log("Fetching from local Profile Server, please set \n var fetchFromPublicProfileServer = sessionStorage.setItem('fetchFromPublicProfileServer', 'true') \n if you want to fetch from public profile API")
 } else {
 var xhr = newCorsXHR("GET","https://profile-data.worldofsteelcraft.tk/api/index.json"); 
 }

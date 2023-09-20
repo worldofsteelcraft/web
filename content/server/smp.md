@@ -86,36 +86,43 @@ div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverst
 
 ***
 {{<homepage/side-by-side>}}
-    {{<homepage/content >}}
-        <h1>Sample heading 1</h1>
-        <p>Sample description 1</p>
-    {{</homepage/content>}} 
-    {{<homepage/content>}}
-        <img src="/images/preview.png" width="100%">
-    {{</homepage/content>}}
-    {{<homepage/content>}}
-    <img src="/images/preview.png" width="100%">
-    {{</homepage/content>}}
-    {{<homepage/content >}}
-        <h1>Sample heading 2</h1>
-        <p>Sample description 2</p>
-    {{</homepage/content>}} 
-    {{<homepage/content >}}
-    <h1>Sample heading 3</h1>
-    <p>Sample description 3</p>
-    {{</homepage/content>}} 
-    {{<homepage/content>}}
-    <img src="/images/preview.png" width="100%">
-    {{</homepage/content>}}
+    {{<homepage/side-by-side-row>}}
         {{<homepage/content>}}
-    <img src="/images/preview.png" width="100%">
-    {{</homepage/content>}}
-    {{<homepage/content >}}
-        <h1>Sample heading 4</h1>
-        <p>Sample description 4</p>
-    {{</homepage/content>}} 
+            <img src="https://placehold.co/801x500/png" width="100%">
+        {{</homepage/content>}}
+        {{<homepage/content >}}
+            <h1>Sample heading 1</h1>
+            <p>Sample description 1</p>
+        {{</homepage/content>}} 
+    {{</homepage/side-by-side-row>}}
+        {{<homepage/side-by-side-row>}}
+        {{<homepage/content>}}
+            <img src="https://placehold.co/802x500/png" width="100%">
+        {{</homepage/content>}}
+        {{<homepage/content >}}
+            <h1>Sample heading 2</h1>
+            <p>Sample description 2</p>
+        {{</homepage/content>}} 
+    {{</homepage/side-by-side-row>}}
+    {{<homepage/side-by-side-row>}}
+        {{<homepage/content>}}
+            <img src="https://placehold.co/803x500/png" width="100%">
+        {{</homepage/content>}}
+        {{<homepage/content >}}
+            <h1>Sample heading 3</h1>
+            <p>Sample description 3</p>
+        {{</homepage/content>}} 
+    {{</homepage/side-by-side-row>}}
+    {{<homepage/side-by-side-row>}}
+        {{<homepage/content>}}
+            <img src="https://placehold.co/803x500/png" width="100%">
+        {{</homepage/content>}}
+        {{<homepage/content >}}
+            <h1>Sample heading 3</h1>
+            <p>Sample description 3</p>
+        {{</homepage/content>}} 
+    {{</homepage/side-by-side-row>}}
 {{</homepage/side-by-side>}}
-
 # Meet the admins and moderators!
 {{<homepage/grid>}}
     {{<homepage/content >}}

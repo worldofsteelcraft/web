@@ -18,6 +18,7 @@ div.serverstatus{
 }
 table.serverstatus-data-table{
     background: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/brown-dirt-minecraft-pattern_thumb.jpg");   
+    margin:auto;
     min-width:95%;
     width:95%;
     border:none !important;
@@ -74,17 +75,18 @@ div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverst
                         <tr><th><i class="fa-solid fa-clock"></i>  Time Checked</th><td><div class="APIResponseDataContainer"><span id="timefetched"><div class="loading-text">Loading</div></span></div></td></tr>
                         </tbody>
                     </table>
-                    {{<collapsible name="Player Graph (temporary disabled)" class="collapsible-notbig collapsible-fullwidth">}}
-                        <!--iframe id="playergraph" style="height:1075px; margin-top:-730px; border:5px #666 solid; border-radius:10px; width:360px;" scrolling="no"  loading="lazy"></iframe-->
-                    {{</collapsible>}}
+                    <!--{{<collapsible name="Player Graph (temporary disabled)" class="collapsible-notbig collapsible-fullwidth">}}
+                        <iframe id="playergraph" style="height:1075px; margin-top:-730px; border:5px #666 solid; border-radius:10px; width:360px;" scrolling="no"  loading="lazy"></iframe
+                    {{</collapsible>}}-->
                     <div id="isofflinecss"></div>
                     <style>div.serverstatuspanel{width:100%;}</style>
                 </div>
                 <a class="button button-green join-btn" href="https://link.worldofsteelcraft.tk/smp-save"><i class="fa-solid fa-gamepad"></i>  Join server(Members Only)</a>
 </div>
-{{</html>}}
 
+{{</html>}}
 ***
+<!--
 {{<homepage/side-by-side>}}
     {{<homepage/side-by-side-row>}}
         {{<homepage/content>}}
@@ -151,3 +153,4 @@ div.serverstatus table, div.serverstatus  tr, div.serverstatus  th, div.serverst
         <p>Sample description 5</p>
     {{</homepage/content>}} 
 {{</homepage/grid>}}
+-->

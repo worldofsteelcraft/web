@@ -4,6 +4,7 @@ title: "World of SteelCraft Rules"
 date: 2022-01-05T04:07:10Z
 description: "Here's the rules that you need to follow within World of SteelCraft."
 draft: false
+pageType: wiki
 ---
 Here's the rules that you need to follow within World of SteelCraft.  
 If reading this rules is difficult to you, you can try to check [Basic English Rules of World of SteelCraft](/rules/en/basic)

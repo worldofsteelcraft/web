@@ -5,6 +5,7 @@ date: 2022-01-10T07:55:00Z
 description: "Narito ang mga Batas o Alituntunin na dapat sundin sa loob ng World of SteelCraft"
 draft: false
 permalink: /rules/en
+pageType: wiki
 ---
 Narito ang mga Batas o Alituntunin na dapat sundin sa loob ng World of SteelCraft.  
 Kung ikaw ay nahihirapang intindihin ang mga nakasulat sa pahinang ito, subukang tignan ang [pinadaling batas o alituntunin ng World of SteelCraft](/rules/fil/basic/)
